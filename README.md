@@ -18,7 +18,7 @@ A ArmyFit foi criada e pensada no usuário que gosta de se exercitar e compartil
     - KeychainSwift **será implementado**
     - Kingfisher **será implementado**
     - Alamofire **será implementado**
-    - Firebase
+    - Firebase **será implementado**
 ## :hammer: Funcionalidades do projeto
 
 - [`Login`](#tela-de-login): Tela onde o usuário efetua o login na plataforma, de forma convencional ou com as contas do Google ou Facebook;
