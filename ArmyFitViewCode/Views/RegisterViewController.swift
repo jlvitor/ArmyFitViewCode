@@ -150,6 +150,22 @@ class RegisterViewController: UIViewController {
     private func setupBackground() {
         view.backgroundColor = UIColor(named: "dark")
     }
+    
+    private func configNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func configGestureToNavigate() {
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(tapAction(_:))
+        )
+        self.hasAccountStackView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func tapAction(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 //MARK: - ViewCode
@@ -170,7 +186,7 @@ extension RegisterViewController: ViewCode {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 44),
+            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 36),
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImage.widthAnchor.constraint(equalToConstant: 112),
             logoImage.heightAnchor.constraint(equalToConstant: 112),
@@ -179,22 +195,25 @@ extension RegisterViewController: ViewCode {
             fieldStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             fieldStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
-            nameTextField.heightAnchor.constraint(equalToConstant: 40),
-            emailTextField.heightAnchor.constraint(equalToConstant: 40),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
-            confirmPasswordTextField.heightAnchor.constraint(equalToConstant: 40),
+            nameTextField.heightAnchor.constraint(equalToConstant: 44),
+            emailTextField.heightAnchor.constraint(equalToConstant: 44),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 44),
+            confirmPasswordTextField.heightAnchor.constraint(equalToConstant: 44),
             
             registerButton.topAnchor.constraint(equalTo: fieldStackView.bottomAnchor, constant: 36),
             registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            registerButton.heightAnchor.constraint(equalToConstant: 40),
+            registerButton.heightAnchor.constraint(equalToConstant: 44),
             registerButton.widthAnchor.constraint(equalToConstant: 200),
             
-            hasAccountStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            hasAccountStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             hasAccountStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
     
     func applyAdditionalChanges() {
         setupBackground()
+        configNavigationBar()
+        configGestureToNavigate()
+        hideKeyboardWhenTappedAround()
     }
 }

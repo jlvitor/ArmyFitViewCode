@@ -123,6 +123,19 @@ final class LoginViewController: UIViewController {
     private func setupBackground() {
         view.backgroundColor = UIColor(named: "dark")
     }
+    
+    private func configGestureToNavigate() {
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(tapAction(_:))
+        )
+        self.newAccountStackView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func tapAction(_ sender: UITapGestureRecognizer) {
+        let vc: RegisterViewController = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 //MARK: - ViewCode
@@ -142,7 +155,7 @@ extension LoginViewController: ViewCode {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 44),
+            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 36),
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImage.widthAnchor.constraint(equalToConstant: 112),
             logoImage.heightAnchor.constraint(equalToConstant: 112),
@@ -151,20 +164,22 @@ extension LoginViewController: ViewCode {
             fieldStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             fieldStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
-            emailTextField.heightAnchor.constraint(equalToConstant: 40),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
+            emailTextField.heightAnchor.constraint(equalToConstant: 44),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 44),
             
             loginButton.topAnchor.constraint(equalTo: fieldStackView.bottomAnchor, constant: 36),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginButton.heightAnchor.constraint(equalToConstant: 40),
+            loginButton.heightAnchor.constraint(equalToConstant: 44),
             loginButton.widthAnchor.constraint(equalToConstant: 140),
             
-            newAccountStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            newAccountStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             newAccountStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
     
     func applyAdditionalChanges() {
         setupBackground()
+        configGestureToNavigate()
+        hideKeyboardWhenTappedAround()
     }
 }
