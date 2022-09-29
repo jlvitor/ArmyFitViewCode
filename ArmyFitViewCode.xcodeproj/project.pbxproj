@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */; };
+		CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388728E5EADF00CB3DBB /* ProfileCell.swift */; };
 		CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */; };
 		CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EBEF28E3FA6F005AE3AB /* SceneDelegate.swift */; };
 		CC39EBF728E3FA70005AE3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC39EBF628E3FA70005AE3AB /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		CC39388728E5EADF00CB3DBB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		CC39EBEA28E3FA6F005AE3AB /* ArmyFitViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmyFitViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC39EBEF28E3FA6F005AE3AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC39388628E5EAB400CB3DBB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC585DC028E52318008E78BB /* ProfileViewController.swift */,
+				CC39388728E5EADF00CB3DBB /* ProfileCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		CC39EBE128E3FA6F005AE3AB = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */,
+				CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */,
 			);
 			path = Entensions;
 			sourceTree = "<group>";
@@ -175,7 +189,7 @@
 				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
 				CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */,
 				CC585DBE28E522F0008E78BB /* TrainingViewController.swift */,
-				CC585DC028E52318008E78BB /* ProfileViewController.swift */,
+				CC39388628E5EAB400CB3DBB /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,9 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
+				CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */,
 				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,

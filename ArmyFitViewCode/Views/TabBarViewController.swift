@@ -22,7 +22,6 @@ class TabBarViewController: UITabBarController {
         //           self.tabBar.itemSpacing = 35
         
         self.tabBar.tintColor = UIColor(named: "green")
-//        self.tabBar.unselectedItemTintColor = .gray
         self.tabBar.backgroundColor = UIColor(named: "dark")
     }
     
@@ -30,7 +29,7 @@ class TabBarViewController: UITabBarController {
         let feedScreen = FeedViewController()
         let scheduleScreen = ScheduleViewController()
         let trainingScreen = TrainingViewController()
-        let profileScreen = ProfileViewController()
+        let profileScreen = UINavigationController(rootViewController: ProfileViewController())
         
         self.setViewControllers([
             feedScreen,
