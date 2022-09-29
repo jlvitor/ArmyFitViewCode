@@ -15,6 +15,7 @@
 		CC39EC0F28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */; };
 		CC39EC1128E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */; };
 		CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB328E513DF008E78BB /* RegisterViewController.swift */; };
+		CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITests.swift; sourceTree = "<group>"; };
 		CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC585DB328E513DF008E78BB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,14 @@
 			path = ArmyFitViewCodeUITests;
 			sourceTree = "<group>";
 		};
+		CC585DB528E51FC4008E78BB /* Entensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */,
+			);
+			path = Entensions;
+			sourceTree = "<group>";
+		};
 		CCC955C028E3FC510019250F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 		CCC955C728E4052C0019250F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CC585DB528E51FC4008E78BB /* Entensions */,
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
 			);
 			path = Common;
@@ -310,6 +321,7 @@
 			files = (
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
+				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
