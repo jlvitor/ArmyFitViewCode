@@ -16,6 +16,11 @@
 		CC39EC1128E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */; };
 		CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB328E513DF008E78BB /* RegisterViewController.swift */; };
 		CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */; };
+		CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB828E52281008E78BB /* TabBarViewController.swift */; };
+		CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBA28E522C8008E78BB /* FeedViewController.swift */; };
+		CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */; };
+		CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBE28E522F0008E78BB /* TrainingViewController.swift */; };
+		CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DC028E52318008E78BB /* ProfileViewController.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +56,11 @@
 		CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC585DB328E513DF008E78BB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		CC585DB828E52281008E78BB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CC585DBA28E522C8008E78BB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		CC585DBE28E522F0008E78BB /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		CC585DC028E52318008E78BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +171,11 @@
 			children = (
 				CCC955C528E3FF9F0019250F /* LoginViewController.swift */,
 				CC585DB328E513DF008E78BB /* RegisterViewController.swift */,
+				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
+				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
+				CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */,
+				CC585DBE28E522F0008E78BB /* TrainingViewController.swift */,
+				CC585DC028E52318008E78BB /* ProfileViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,11 +334,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
 				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
+				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
+				CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */,
+				CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
+				CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +520,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,7 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,6 +548,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +558,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
