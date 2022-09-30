@@ -28,7 +28,7 @@ class TabBarViewController: UITabBarController {
     private func setupTabBarController() {
         let feedScreen = FeedViewController()
         let scheduleScreen = ScheduleViewController()
-        let trainingScreen = TrainingViewController()
+        let trainingScreen = UINavigationController(rootViewController: TrainingViewController())
         let profileScreen = UINavigationController(rootViewController: ProfileViewController())
         
         self.setViewControllers([

@@ -90,7 +90,7 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        title = "Perfil"
+        navigationItem.title = "Perfil"
         navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
        
         let barButtonItem = UIBarButtonItem(
@@ -107,6 +107,7 @@ class ProfileViewController: UIViewController {
     }
 }
 
+//MARK: - ViewCode
 extension ProfileViewController: ViewCode {
     func buildHierarchy() {
         view.addSubview(greenView)
@@ -156,22 +157,24 @@ extension ProfileViewController: ViewCode {
     }
 }
 
+//MARK: - UITableViewDelegate
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
 }
 
+//MARK: - UITableViewDataSource
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let profileCell = tableView.dequeueCell(withType: ProfileCell.self, for: indexPath) as? ProfileCell else { return UITableViewCell()}
+        guard let profileCell = tableView.dequeueCell(withType: ProfileCell.self, for: indexPath) as? ProfileCell else {
+            return UITableViewCell()
+        }
         
         return profileCell
     }
-    
-    
 }
