@@ -23,6 +23,7 @@
 		CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */; };
 		CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBE28E522F0008E78BB /* TrainingViewController.swift */; };
 		CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DC028E52318008E78BB /* ProfileViewController.swift */; };
+		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		CC585DBE28E522F0008E78BB /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		CC585DC028E52318008E78BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,15 @@
 			path = Entensions;
 			sourceTree = "<group>";
 		};
+		CC67D93128E69CB600AC90A0 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				CC585DBE28E522F0008E78BB /* TrainingViewController.swift */,
+				CC67D93228E69CD500AC90A0 /* TrainingCell.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
 		CCC955C028E3FC510019250F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +199,7 @@
 				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
 				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
 				CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */,
-				CC585DBE28E522F0008E78BB /* TrainingViewController.swift */,
+				CC67D93128E69CB600AC90A0 /* Training */,
 				CC39388628E5EAB400CB3DBB /* Profile */,
 			);
 			path = Views;
@@ -353,6 +364,7 @@
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
 				CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */,
+				CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */,
 				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
