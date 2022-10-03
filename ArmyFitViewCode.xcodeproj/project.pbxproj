@@ -24,8 +24,21 @@
 		CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBE28E522F0008E78BB /* TrainingViewController.swift */; };
 		CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DC028E52318008E78BB /* ProfileViewController.swift */; };
 		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
+		CC9B5FEA28EA89D9004F4B55 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FE928EA89D9004F4B55 /* APIConstants.swift */; };
+		CC9B5FEC28EA9010004F4B55 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEB28EA9010004F4B55 /* Service.swift */; };
+		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
+		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
+		CCFEAEA328EB39890013D34F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA228EB39890013D34F /* User.swift */; };
+		CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA528EB3AAB0013D34F /* Authentication.swift */; };
+		CCFEAEA828EB3AC10013D34F /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA728EB3AC10013D34F /* UserResponse.swift */; };
+		CCFEAEB928EB3BD90013D34F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEB828EB3BD90013D34F /* Post.swift */; };
+		CCFEAEBB28EB3BE40013D34F /* LikePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEBA28EB3BE40013D34F /* LikePost.swift */; };
+		CCFEAEBD28EB3BEF0013D34F /* CommentPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEBC28EB3BEF0013D34F /* CommentPost.swift */; };
+		CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEBF28EB3C4C0013D34F /* Training.swift */; };
+		CCFEAEC228EB3C5D0013D34F /* TrainingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEC128EB3C5D0013D34F /* TrainingUser.swift */; };
+		CCFEAEC428EB3C6E0013D34F /* TrainingHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEC328EB3C6E0013D34F /* TrainingHours.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +80,21 @@
 		CC585DBE28E522F0008E78BB /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		CC585DC028E52318008E78BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		CC9B5FE928EA89D9004F4B55 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CC9B5FEB28EA9010004F4B55 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CCFEAEA228EB39890013D34F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CCFEAEA528EB3AAB0013D34F /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		CCFEAEA728EB3AC10013D34F /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		CCFEAEB828EB3BD90013D34F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CCFEAEBA28EB3BE40013D34F /* LikePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePost.swift; sourceTree = "<group>"; };
+		CCFEAEBC28EB3BEF0013D34F /* CommentPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPost.swift; sourceTree = "<group>"; };
+		CCFEAEBF28EB3C4C0013D34F /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		CCFEAEC128EB3C5D0013D34F /* TrainingUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUser.swift; sourceTree = "<group>"; };
+		CCFEAEC328EB3C6E0013D34F /* TrainingHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHours.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +199,14 @@
 			path = Training;
 			sourceTree = "<group>";
 		};
+		CC9B5FED28EA90C9004F4B55 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CC9B5FEE28EA90D6004F4B55 /* Errors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		CCC955C028E3FC510019250F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +221,10 @@
 		CCC955C128E3FEAB0019250F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CCFEAEA228EB39890013D34F /* User.swift */,
+				CCFEAEA428EB3A990013D34F /* Login */,
+				CCFEAEB728EB3BCD0013D34F /* Feed */,
+				CCFEAEBE28EB3C3A0013D34F /* Training */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +253,9 @@
 		CCC955C428E3FF0F0019250F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CC9B5FEB28EA9010004F4B55 /* Service.swift */,
+				CC9B5FE928EA89D9004F4B55 /* APIConstants.swift */,
+				CCFEAEA028EB38160013D34F /* AuthService.swift */,
 				CCC955C128E3FEAB0019250F /* Models */,
 			);
 			path = Service;
@@ -223,10 +264,40 @@
 		CCC955C728E4052C0019250F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CC9B5FED28EA90C9004F4B55 /* Constants */,
 				CC585DB528E51FC4008E78BB /* Entensions */,
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CCFEAEA428EB3A990013D34F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEAEA528EB3AAB0013D34F /* Authentication.swift */,
+				CCFEAEA728EB3AC10013D34F /* UserResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CCFEAEB728EB3BCD0013D34F /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEAEB828EB3BD90013D34F /* Post.swift */,
+				CCFEAEBA28EB3BE40013D34F /* LikePost.swift */,
+				CCFEAEBC28EB3BEF0013D34F /* CommentPost.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		CCFEAEBE28EB3C3A0013D34F /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEAEBF28EB3C4C0013D34F /* Training.swift */,
+				CCFEAEC128EB3C5D0013D34F /* TrainingUser.swift */,
+				CCFEAEC328EB3C6E0013D34F /* TrainingHours.swift */,
+			);
+			path = Training;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,19 +431,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */,
+				CCFEAEB928EB3BD90013D34F /* Post.swift in Sources */,
+				CCFEAEC228EB3C5D0013D34F /* TrainingUser.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
+				CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */,
+				CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
 				CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */,
 				CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */,
+				CCFEAEBB28EB3BE40013D34F /* LikePost.swift in Sources */,
 				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
+				CCFEAEBD28EB3BEF0013D34F /* CommentPost.swift in Sources */,
+				CCFEAEA828EB3AC10013D34F /* UserResponse.swift in Sources */,
+				CC9B5FEC28EA9010004F4B55 /* Service.swift in Sources */,
 				CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */,
 				CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */,
+				CC9B5FEA28EA89D9004F4B55 /* APIConstants.swift in Sources */,
+				CCFEAEC428EB3C6E0013D34F /* TrainingHours.swift in Sources */,
+				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
 				CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
+				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
+				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
