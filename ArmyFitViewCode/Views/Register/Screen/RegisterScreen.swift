@@ -1,14 +1,25 @@
 //
-//  RegisterViewController.swift
+//  RegisterScreen.swift
 //  ArmyFitViewCode
 //
-//  Created by Jean Lucas Vitor on 28/09/22.
+//  Created by Jean Lucas Vitor on 03/10/22.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+protocol RegisterScreenProtocol: AnyObject {
+    func backAction()
+    func registerButtonAction()
+}
 
+final class RegisterScreen: UIView {
+    
+    private weak var delegate: RegisterScreenProtocol?
+    
+    func delegate(delegate: RegisterScreenProtocol?) {
+        self.delegate = delegate
+    }
+    
     private lazy var logoImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "logo")
@@ -29,7 +40,7 @@ class RegisterViewController: UIViewController {
         return stack
     }()
     
-    private lazy var nameTextField: UITextField = {
+    lazy var nameTextField: UITextField = {
         let email = UITextField()
         email.placeholder = "Nome"
         email.keyboardType = .alphabet
@@ -42,7 +53,7 @@ class RegisterViewController: UIViewController {
         return email
     }()
     
-    private lazy var emailTextField: UITextField = {
+    lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.placeholder = "Email"
         email.keyboardType = .emailAddress
@@ -56,7 +67,7 @@ class RegisterViewController: UIViewController {
         return email
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let password = UITextField()
         password.placeholder = "Senha"
         password.isSecureTextEntry = true
@@ -70,7 +81,7 @@ class RegisterViewController: UIViewController {
         return password
     }()
     
-    private lazy var confirmPasswordTextField: UITextField = {
+    lazy var confirmPasswordTextField: UITextField = {
         let password = UITextField()
         password.placeholder = "Confirmar senha"
         password.isSecureTextEntry = true
@@ -110,6 +121,7 @@ class RegisterViewController: UIViewController {
         btn.backgroundColor = .black
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 5
+        btn.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -141,79 +153,75 @@ class RegisterViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
     }
     
-    private func setupBackground() {
-        view.backgroundColor = UIColor(named: "dark")
-    }
-    
-    private func configNavigationBar() {
-        self.navigationController?.navigationBar.isHidden = true
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func configGestureToNavigate() {
         let tap = UITapGestureRecognizer(
             target: self,
-            action: #selector(tapAction(_:))
+            action: #selector(tappedBack(_:))
         )
         self.hasAccountStackView.addGestureRecognizer(tap)
     }
     
-    @objc private func tapAction(_ sender: UITapGestureRecognizer) {
-        self.navigationController?.popViewController(animated: true)
+    @objc private func tappedBack(_ sender: UITapGestureRecognizer) {
+        self.delegate?.backAction()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.registerButtonAction()
     }
 }
 
-//MARK: - ViewCode
-extension RegisterViewController: ViewCode {
+extension RegisterScreen: ViewCode {
     func buildHierarchy() {
-        view.addSubview(logoImage)
-        view.addSubview(fieldStackView)
+        self.addSubview(logoImage)
+        self.addSubview(fieldStackView)
         fieldStackView.addArrangedSubview(nameTextField)
         fieldStackView.addArrangedSubview(emailTextField)
         fieldStackView.addArrangedSubview(passwordTextField)
         fieldStackView.addArrangedSubview(confirmPasswordTextField)
         fieldStackView.addArrangedSubview(passwordInstructionsLabel)
-        view.addSubview(registerButton)
-        view.addSubview(hasAccountStackView)
+        self.addSubview(registerButton)
+        self.addSubview(hasAccountStackView)
         hasAccountStackView.addArrangedSubview(hasAccountLabel)
         hasAccountStackView.addArrangedSubview(hasAccountGreenLabel)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 36),
-            logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 36),
+            logoImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoImage.widthAnchor.constraint(equalToConstant: 112),
             logoImage.heightAnchor.constraint(equalToConstant: 112),
             
             fieldStackView.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 56),
-            fieldStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            fieldStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-
+            fieldStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            fieldStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            
             nameTextField.heightAnchor.constraint(equalToConstant: 44),
             emailTextField.heightAnchor.constraint(equalToConstant: 44),
             passwordTextField.heightAnchor.constraint(equalToConstant: 44),
             confirmPasswordTextField.heightAnchor.constraint(equalToConstant: 44),
             
             registerButton.topAnchor.constraint(equalTo: fieldStackView.bottomAnchor, constant: 36),
-            registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            registerButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             registerButton.heightAnchor.constraint(equalToConstant: 44),
             registerButton.widthAnchor.constraint(equalToConstant: 200),
             
-            hasAccountStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
-            hasAccountStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            hasAccountStackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            hasAccountStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
         ])
     }
     
     func applyAdditionalChanges() {
-        setupBackground()
-        configNavigationBar()
         configGestureToNavigate()
-        hideKeyboardWhenTappedAround()
     }
 }
