@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     //MARK: - Init`s
     override func loadView() {
         self.registerScreen = RegisterScreen()
+        self.registerScreen?.delegate(self)
         self.view = self.registerScreen
     }
 
@@ -25,7 +26,6 @@ class RegisterViewController: UIViewController {
         setupBackground()
         configNavigationBar()
         configViewModel()
-        self.registerScreen?.delegate(delegate: self)
     }
     
     //MARK: - Private methods

@@ -25,6 +25,7 @@
 		CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DC028E52318008E78BB /* ProfileViewController.swift */; };
 		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
 		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
+		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
@@ -39,6 +40,7 @@
 		CCFEAEC428EB3C6E0013D34F /* TrainingHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEC328EB3C6E0013D34F /* TrainingHours.swift */; };
 		CCFEAEC728EB87370013D34F /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEC628EB87370013D34F /* RegisterScreen.swift */; };
 		CCFEAEC928EB8E9C0013D34F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */; };
+		CCFEAECE28EBC9970013D34F /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAECD28EBC9970013D34F /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,7 @@
 		CC585DC028E52318008E78BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		CCFEAEC328EB3C6E0013D34F /* TrainingHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHours.swift; sourceTree = "<group>"; };
 		CCFEAEC628EB87370013D34F /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		CCFEAECD28EBC9970013D34F /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +236,7 @@
 		CCC955C228E3FEE20019250F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CCC955C528E3FF9F0019250F /* LoginViewController.swift */,
+				CCFEAECB28EBC9850013D34F /* Login */,
 				CCFEAEC528EB87230013D34F /* Register */,
 				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
 				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
@@ -247,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */,
+				CCB8809E28F63467007EF254 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -312,6 +317,23 @@
 			isa = PBXGroup;
 			children = (
 				CCFEAEC628EB87370013D34F /* RegisterScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CCFEAECB28EBC9850013D34F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEAECC28EBC98C0013D34F /* Screen */,
+				CCC955C528E3FF9F0019250F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CCFEAECC28EBC98C0013D34F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEAECD28EBC9970013D34F /* LoginScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -467,10 +489,12 @@
 				CCFEAEC428EB3C6E0013D34F /* TrainingHours.swift in Sources */,
 				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
+				CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */,
 				CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */,
 				CCFEAEC728EB87370013D34F /* RegisterScreen.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
 				CCFEAEC928EB8E9C0013D34F /* RegisterViewModel.swift in Sources */,
+				CCFEAECE28EBC9970013D34F /* LoginScreen.swift in Sources */,
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
 				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
 			);
@@ -570,7 +594,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -624,7 +648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -648,7 +672,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,7 +700,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
