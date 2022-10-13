@@ -16,7 +16,7 @@ final class RegisterScreen: UIView {
     
     private weak var delegate: RegisterScreenProtocol?
     
-    func delegate(delegate: RegisterScreenProtocol?) {
+    func delegate(_ delegate: RegisterScreenProtocol?) {
         self.delegate = delegate
     }
     
@@ -41,16 +41,17 @@ final class RegisterScreen: UIView {
     }()
     
     lazy var nameTextField: UITextField = {
-        let email = UITextField()
-        email.placeholder = "Nome"
-        email.keyboardType = .alphabet
-        email.autocapitalizationType = .words
-        email.spellCheckingType = .no
-        email.backgroundColor = .white
-        email.font = UIFont.systemFont(ofSize: 17)
-        email.borderStyle = .roundedRect
-        email.translatesAutoresizingMaskIntoConstraints = false
-        return email
+        let name = UITextField()
+        name.placeholder = "Nome"
+        name.keyboardType = .alphabet
+        name.autocapitalizationType = .words
+        name.spellCheckingType = .no
+        name.backgroundColor = .white
+        name.font = UIFont.systemFont(ofSize: 17)
+        name.borderStyle = .roundedRect
+        name.overrideUserInterfaceStyle = .light
+        name.translatesAutoresizingMaskIntoConstraints = false
+        return name
     }()
     
     lazy var emailTextField: UITextField = {
@@ -63,6 +64,7 @@ final class RegisterScreen: UIView {
         email.backgroundColor = .white
         email.font = UIFont.systemFont(ofSize: 17)
         email.borderStyle = .roundedRect
+        email.overrideUserInterfaceStyle = .light
         email.translatesAutoresizingMaskIntoConstraints = false
         return email
     }()
@@ -77,22 +79,24 @@ final class RegisterScreen: UIView {
         password.backgroundColor = .white
         password.font = UIFont.systemFont(ofSize: 17)
         password.borderStyle = .roundedRect
+        password.overrideUserInterfaceStyle = .light
         password.translatesAutoresizingMaskIntoConstraints = false
         return password
     }()
     
     lazy var confirmPasswordTextField: UITextField = {
-        let password = UITextField()
-        password.placeholder = "Confirmar senha"
-        password.isSecureTextEntry = true
-        password.keyboardType = .default
-        password.autocapitalizationType = .none
-        password.spellCheckingType = .no
-        password.backgroundColor = .white
-        password.font = UIFont.systemFont(ofSize: 17)
-        password.borderStyle = .roundedRect
-        password.translatesAutoresizingMaskIntoConstraints = false
-        return password
+        let confirmPpassword = UITextField()
+        confirmPpassword.placeholder = "Confirmar senha"
+        confirmPpassword.isSecureTextEntry = true
+        confirmPpassword.keyboardType = .default
+        confirmPpassword.autocapitalizationType = .none
+        confirmPpassword.spellCheckingType = .no
+        confirmPpassword.backgroundColor = .white
+        confirmPpassword.font = UIFont.systemFont(ofSize: 17)
+        confirmPpassword.borderStyle = .roundedRect
+        confirmPpassword.overrideUserInterfaceStyle = .light
+        confirmPpassword.translatesAutoresizingMaskIntoConstraints = false
+        return confirmPpassword
     }()
     
     private lazy var passwordInstructionsStackView: UIStackView = {
