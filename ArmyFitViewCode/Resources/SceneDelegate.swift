@@ -10,14 +10,37 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    let isLogged: Bool = UserDefaults.getIsLogged()
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: windowScene)
-        self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        self.window?.makeKeyAndVisible()
+        
+        if isLogged {
+            let tabBarVC: TabBarViewController = .init()
+            
+            self.window?.rootViewController = tabBarVC
+            self.window?.makeKeyAndVisible()
+        } else {
+            let loginVC: LoginViewController = .init()
+            
+            self.window?.rootViewController = UINavigationController(rootViewController: loginVC)
+            self.window?.makeKeyAndVisible()
+        }
+    }
+    
+    func setRootViewController(_ viewController: UIViewController) {
+        guard let window = window else { return }
+        
+        window.rootViewController = viewController
+        
+        UIView.transition(
+            with: window,
+            duration: 0.4,
+            options: .transitionCrossDissolve,
+            animations: nil)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

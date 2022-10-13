@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginScreenProtocol: AnyObject {
     func goToRegisterScreen()
+    func loginButtonAction()
 }
 
 final class LoginScreen: UIView {
@@ -43,7 +44,7 @@ final class LoginScreen: UIView {
         return stack
     }()
     
-    private lazy var emailTextField: UITextField = {
+    lazy var emailTextField: UITextField = {
         let email = UITextField()
         email.placeholder = "Email"
         email.keyboardType = .emailAddress
@@ -58,7 +59,7 @@ final class LoginScreen: UIView {
         return email
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let password = UITextField()
         password.placeholder = "Senha"
         password.isSecureTextEntry = true
@@ -99,6 +100,7 @@ final class LoginScreen: UIView {
         btn.backgroundColor = .black
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 5
+        btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -208,17 +210,21 @@ final class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-        private func configGestureToNavigate() {
-            let tap = UITapGestureRecognizer(
-                target: self,
-                action: #selector(tapAction(_:))
-            )
-            self.newAccountStackView.addGestureRecognizer(tap)
-        }
+    private func configGestureToNavigate() {
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(tapAction(_:))
+        )
+        self.newAccountStackView.addGestureRecognizer(tap)
+    }
     
-        @objc private func tapAction(_ sender: UITapGestureRecognizer) {
-            self.delegate?.goToRegisterScreen()
-        }
+    @objc private func tapAction(_ sender: UITapGestureRecognizer) {
+        self.delegate?.goToRegisterScreen()
+    }
+    
+    @objc private func tappedLoginButton() {
+        self.delegate?.loginButtonAction()
+    }
 }
 
 //MARK: - ViewCode
@@ -259,7 +265,7 @@ extension LoginScreen: ViewCode {
         ])
     }
     
-        func applyAdditionalChanges() {
-            configGestureToNavigate()
-        }
+    func applyAdditionalChanges() {
+        configGestureToNavigate()
+    }
 }
