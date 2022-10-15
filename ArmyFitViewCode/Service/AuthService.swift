@@ -66,7 +66,9 @@ final class AuthService {
                     completion(auth, nil)
                 }
             } catch {
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
             }
         }
         task.resume()
