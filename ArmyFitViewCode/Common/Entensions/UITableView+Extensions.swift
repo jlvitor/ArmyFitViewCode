@@ -7,7 +7,7 @@
 
 import UIKit
 
-public extension UITableView {
+extension UITableView {
     
     func registerCell(type: UITableViewCell.Type) {
         register(type, forCellReuseIdentifier: type.identifier)

@@ -42,7 +42,9 @@ final class LoginViewController: UIViewController {
             title: "Acesso negado",
             message: "Dados incorretos, verifique e tente novamente!",
             preferredStyle: .alert)
-        let confirm = UIAlertAction(title: "OK", style: .cancel)
+        let confirm = UIAlertAction(title: "OK", style: .cancel) { action in
+            return
+        }
         error.addAction(confirm)
         present(error, animated: true)
     }

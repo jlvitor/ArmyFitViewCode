@@ -10,6 +10,8 @@
 		469ADB8C9A45BAC907749999 /* Pods_ArmyFitViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C6DB05B251155A1F385446 /* Pods_ArmyFitViewCode.framework */; };
 		71E5AA7124B68960AB6838C6 /* Pods_ArmyFitViewCode_ArmyFitViewCodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0152B487CC08AC58CAC7A54E /* Pods_ArmyFitViewCode_ArmyFitViewCodeUITests.framework */; };
 		CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */; };
+		CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */; };
+		CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */; };
 		CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */; };
 		CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388728E5EADF00CB3DBB /* ProfileCell.swift */; };
 		CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */; };
@@ -74,6 +76,8 @@
 		B3C6DB05B251155A1F385446 /* Pods_ArmyFitViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArmyFitViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBFFCF7FEE1CEF4EBBC8ED2 /* Pods-ArmyFitViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArmyFitViewCode.debug.xcconfig"; path = "Target Support Files/Pods-ArmyFitViewCode/Pods-ArmyFitViewCode.debug.xcconfig"; sourceTree = "<group>"; };
 		CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		CC39388728E5EADF00CB3DBB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		CC39EBEA28E3FA6F005AE3AB /* ArmyFitViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmyFitViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,11 +170,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC23F1BD28F8CCEB005F6667 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC23F1C328F8CD3F005F6667 /* Cell */,
+				CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC23F1C328F8CD3F005F6667 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC39388728E5EADF00CB3DBB /* ProfileCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CC39388628E5EAB400CB3DBB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CC23F1BD28F8CCEB005F6667 /* Screen */,
 				CC585DC028E52318008E78BB /* ProfileViewController.swift */,
-				CC39388728E5EADF00CB3DBB /* ProfileCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -293,8 +314,9 @@
 		CCC955C328E3FEE70019250F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */,
 				CCB8809E28F63467007EF254 /* LoginViewModel.swift */,
+				CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */,
+				CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -454,6 +476,7 @@
 				TargetAttributes = {
 					CC39EBE928E3FA6F005AE3AB = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1400;
 					};
 					CC39EBFF28E3FA70005AE3AB = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -624,6 +647,7 @@
 				CCFEAEC228EB3C5D0013D34F /* TrainingUser.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
+				CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */,
 				CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */,
 				CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
@@ -632,6 +656,7 @@
 				CCFEAEBB28EB3BE40013D34F /* LikePost.swift in Sources */,
 				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
+				CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
 				CCFEAEBD28EB3BEF0013D34F /* CommentPost.swift in Sources */,
 				CCFEAEA828EB3AC10013D34F /* UserResponse.swift in Sources */,
@@ -816,6 +841,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L859KY23VK;
@@ -834,6 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeanlucas.ArmyFitViewCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -845,6 +872,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L859KY23VK;
