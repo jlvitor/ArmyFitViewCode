@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
     
     private func setupNavigationBar() {
         navigationItem.title = "Perfil"
+        navigationController?.overrideUserInterfaceStyle = .dark
         navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
         
         let barButtonItem = UIBarButtonItem(

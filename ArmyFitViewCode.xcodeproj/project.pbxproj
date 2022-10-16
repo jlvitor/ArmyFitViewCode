@@ -31,6 +31,8 @@
 		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
 		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
+		CCB8D9A528FB6E290048BA6A /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8D9A428FB6E290048BA6A /* TabItem.swift */; };
+		CCB8D9A928FB70D80048BA6A /* TabNavigationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8D9A828FB70D80048BA6A /* TabNavigationScreen.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
@@ -101,6 +103,8 @@
 		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CCB8D9A428FB6E290048BA6A /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		CCB8D9A828FB70D80048BA6A /* TabNavigationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationScreen.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -221,11 +225,12 @@
 		CC39EBEC28E3FA6F005AE3AB /* ArmyFitViewCode */ = {
 			isa = PBXGroup;
 			children = (
-				CCC955C028E3FC510019250F /* Resources */,
+				CC59034328FC89B400C9FEB1 /* Utils */,
 				CCC955C428E3FF0F0019250F /* Service */,
 				CCC955C228E3FEE20019250F /* Views */,
 				CCC955C328E3FEE70019250F /* ViewModels */,
 				CC39EBFB28E3FA70005AE3AB /* Info.plist */,
+				CCC955C028E3FC510019250F /* Resources */,
 				CCC955C728E4052C0019250F /* Common */,
 			);
 			path = ArmyFitViewCode;
@@ -258,6 +263,15 @@
 			path = Entensions;
 			sourceTree = "<group>";
 		};
+		CC59034328FC89B400C9FEB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */,
+				CC39EBEF28E3FA6F005AE3AB /* SceneDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CC67D93128E69CB600AC90A0 /* Training */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,11 +289,26 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		CCB8D9A628FB70A10048BA6A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8D9A728FB70BE0048BA6A /* Screen */,
+				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CCB8D9A728FB70BE0048BA6A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8D9A828FB70D80048BA6A /* TabNavigationScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		CCC955C028E3FC510019250F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */,
-				CC39EBEF28E3FA6F005AE3AB /* SceneDelegate.swift */,
 				CC39EBF628E3FA70005AE3AB /* Assets.xcassets */,
 				CC39EBF828E3FA70005AE3AB /* LaunchScreen.storyboard */,
 			);
@@ -302,7 +331,7 @@
 			children = (
 				CCFEAECB28EBC9850013D34F /* Login */,
 				CCFEAEC528EB87230013D34F /* Register */,
-				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
+				CCB8D9A628FB70A10048BA6A /* TabBar */,
 				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
 				CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */,
 				CC67D93128E69CB600AC90A0 /* Training */,
@@ -336,6 +365,7 @@
 				CC9B5FED28EA90C9004F4B55 /* Constants */,
 				CC585DB528E51FC4008E78BB /* Entensions */,
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
+				CCB8D9A428FB6E290048BA6A /* TabItem.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -667,6 +697,7 @@
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
 				CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */,
 				CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */,
+				CCB8D9A928FB70D80048BA6A /* TabNavigationScreen.swift in Sources */,
 				CCFEAEC728EB87370013D34F /* RegisterScreen.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
 				CCFEAEC928EB8E9C0013D34F /* RegisterViewModel.swift in Sources */,
@@ -674,6 +705,7 @@
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
 				CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */,
 				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
+				CCB8D9A528FB6E290048BA6A /* TabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
