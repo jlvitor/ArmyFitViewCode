@@ -25,6 +25,6 @@ extension UITableView {
 
 public extension UITableViewCell {
     static var identifier: String {
-        return String(describing: self)
+        String(describing: self)
     }
 }
