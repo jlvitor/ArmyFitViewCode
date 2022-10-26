@@ -32,6 +32,12 @@
 		CC59034828FC93FB00C9FEB1 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59034728FC93FB00C9FEB1 /* ScheduleCell.swift */; };
 		CC59034C28FC943D00C9FEB1 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59034B28FC943D00C9FEB1 /* ScheduleScreen.swift */; };
 		CC59034E28FC995100C9FEB1 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59034D28FC995100C9FEB1 /* UICollectionView+Extension.swift */; };
+		CC59035028FCC8D800C9FEB1 /* SchedulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59034F28FCC8D800C9FEB1 /* SchedulesViewModel.swift */; };
+		CC59035228FCCA6F00C9FEB1 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035128FCCA6F00C9FEB1 /* ScheduleViewModel.swift */; };
+		CC59035528FCCC2200C9FEB1 /* TrainingHoursService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035428FCCC2200C9FEB1 /* TrainingHoursService.swift */; };
+		CC59035728FCCD3700C9FEB1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035628FCCD3700C9FEB1 /* String+Extension.swift */; };
+		CC59035928FCCDE400C9FEB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035828FCCDE400C9FEB1 /* Date+Extension.swift */; };
+		CC59035B28FCF29F00C9FEB1 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035A28FCF29F00C9FEB1 /* DayViewModel.swift */; };
 		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
 		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
@@ -90,7 +96,6 @@
 		CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC39EBEF28E3FA6F005AE3AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC39EBF628E3FA70005AE3AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC39EBF928E3FA70005AE3AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC39EBFB28E3FA70005AE3AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC39EC0028E3FA70005AE3AB /* ArmyFitViewCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArmyFitViewCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC39EC0428E3FA70005AE3AB /* ArmyFitViewCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeTests.swift; sourceTree = "<group>"; };
@@ -108,7 +113,15 @@
 		CC59034728FC93FB00C9FEB1 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		CC59034B28FC943D00C9FEB1 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
 		CC59034D28FC995100C9FEB1 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		CC59034F28FCC8D800C9FEB1 /* SchedulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesViewModel.swift; sourceTree = "<group>"; };
+		CC59035128FCCA6F00C9FEB1 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		CC59035428FCCC2200C9FEB1 /* TrainingHoursService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHoursService.swift; sourceTree = "<group>"; };
+		CC59035628FCCD3700C9FEB1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CC59035828FCCDE400C9FEB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CC59035A28FCF29F00C9FEB1 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		CC6B499C2909E41100CBA70E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CC6B499D2909E42A00CBA70E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCB8D9A428FB6E290048BA6A /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
@@ -268,6 +281,8 @@
 				CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */,
 				CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */,
 				CC59034D28FC995100C9FEB1 /* UICollectionView+Extension.swift */,
+				CC59035628FCCD3700C9FEB1 /* String+Extension.swift */,
+				CC59035828FCCDE400C9FEB1 /* Date+Extension.swift */,
 			);
 			path = Entensions;
 			sourceTree = "<group>";
@@ -306,6 +321,16 @@
 				CC59034728FC93FB00C9FEB1 /* ScheduleCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC59035328FCCA7700C9FEB1 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				CC59034F28FCC8D800C9FEB1 /* SchedulesViewModel.swift */,
+				CC59035128FCCA6F00C9FEB1 /* ScheduleViewModel.swift */,
+				CC59035A28FCF29F00C9FEB1 /* DayViewModel.swift */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		CC67D93128E69CB600AC90A0 /* Training */ = {
@@ -381,6 +406,7 @@
 			children = (
 				CCB8809E28F63467007EF254 /* LoginViewModel.swift */,
 				CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */,
+				CC59035328FCCA7700C9FEB1 /* Schedule */,
 				CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
@@ -390,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				CCFEAEA028EB38160013D34F /* AuthService.swift */,
+				CC59035428FCCC2200C9FEB1 /* TrainingHoursService.swift */,
 				CCC955C128E3FEAB0019250F /* Models */,
 			);
 			path = Service;
@@ -560,6 +587,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-BR",
 				Base,
 			);
 			mainGroup = CC39EBE128E3FA6F005AE3AB;
@@ -711,6 +739,7 @@
 				CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */,
 				CCFEAEB928EB3BD90013D34F /* Post.swift in Sources */,
 				CCFEAEC228EB3C5D0013D34F /* TrainingUser.swift in Sources */,
+				CC59035228FCCA6F00C9FEB1 /* ScheduleViewModel.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */,
@@ -718,6 +747,7 @@
 				CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
 				CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */,
+				CC59035B28FCF29F00C9FEB1 /* DayViewModel.swift in Sources */,
 				CC59034628FC93E200C9FEB1 /* DateCell.swift in Sources */,
 				CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */,
 				CCFEAEBB28EB3BE40013D34F /* LikePost.swift in Sources */,
@@ -725,12 +755,16 @@
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */,
 				CC59034E28FC995100C9FEB1 /* UICollectionView+Extension.swift in Sources */,
+				CC59035528FCCC2200C9FEB1 /* TrainingHoursService.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
 				CCFEAEBD28EB3BEF0013D34F /* CommentPost.swift in Sources */,
+				CC59035028FCC8D800C9FEB1 /* SchedulesViewModel.swift in Sources */,
+				CC59035728FCCD3700C9FEB1 /* String+Extension.swift in Sources */,
 				CCFEAEA828EB3AC10013D34F /* UserResponse.swift in Sources */,
 				CC585DC128E52318008E78BB /* ProfileViewController.swift in Sources */,
 				CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */,
 				CCFEAEC428EB3C6E0013D34F /* TrainingHours.swift in Sources */,
+				CC59035928FCCDE400C9FEB1 /* Date+Extension.swift in Sources */,
 				CC59034828FC93FB00C9FEB1 /* ScheduleCell.swift in Sources */,
 				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
@@ -785,7 +819,8 @@
 		CC39EBF828E3FA70005AE3AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC39EBF928E3FA70005AE3AB /* Base */,
+				CC6B499C2909E41100CBA70E /* pt-BR */,
+				CC6B499D2909E42A00CBA70E /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -797,6 +832,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -857,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
