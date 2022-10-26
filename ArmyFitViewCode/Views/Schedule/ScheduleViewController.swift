@@ -10,6 +10,7 @@ import UIKit
 class ScheduleViewController: UIViewController {
     
     private var scheduleScreen: ScheduleScreen?
+    private let viewModel: SchedulesViewModel = .init()
     
     override func loadView() {
         super.loadView()
@@ -24,8 +25,16 @@ class ScheduleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configViewModel()
         setupBackground()
         setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let date = viewModel.date {
+            viewModel.fetchTrainingsHours(date)
+        }
     }
     
     private func setupBackground() {
@@ -37,6 +46,12 @@ class ScheduleViewController: UIViewController {
         navigationController?.overrideUserInterfaceStyle = .dark
         navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
     }
+    
+    private func configViewModel() {
+        viewModel.delegate = self
+        viewModel.getRemainingDaysInAMonth()
+        viewModel.fetchTrainingsHours(Date.getCurrentDateToDateString())
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
@@ -46,14 +61,24 @@ extension ScheduleViewController: UICollectionViewDelegate, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let day = viewModel.trainingDays[indexPath.item].0
+        let date = viewModel.getDayStringToDateString(day)
+        
+        viewModel.fetchTrainingsHours(date)
+        viewModel.cellSelected = indexPath.row
+        viewModel.date = date
+        collectionView.reloadData()
     }
 }
 
 // MARK: - UICollectionViewDataSource
 extension ScheduleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return viewModel.trainingDays.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,9 +86,14 @@ extension ScheduleViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
+        let cellViewModel = viewModel.getDayCellViewModel(indexPath.row)
+        
+        dateCell.configure(cellViewModel)
         dateCell.clipsToBounds = true
-        dateCell.layer.cornerRadius = 5
+        dateCell.layer.cornerRadius = 8
         dateCell.backgroundColor = UIColor(named: "dark")
+        
+        viewModel.configCellBackgroundColorWhenSelected(dateCell, at: indexPath.row)
         
         return dateCell
     }
@@ -84,7 +114,7 @@ extension ScheduleViewController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension ScheduleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.trainingHoursCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,13 +122,19 @@ extension ScheduleViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let cellViewModel = viewModel.getTrainingCellViewModel(indexPath.row)
+        
+        scheduleCell.configure(cellViewModel)
         scheduleCell.selectionStyle = .none
         scheduleCell.backgroundColor = .clear
         
         return scheduleCell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Horários disponíveis"
+}
+
+// MARK: - SchedulesViewModelDelegate
+extension ScheduleViewController: SchedulesViewModelDelegate {
+    func reloadData() {
+        scheduleScreen?.scheduleTableView.reloadData()
     }
 }

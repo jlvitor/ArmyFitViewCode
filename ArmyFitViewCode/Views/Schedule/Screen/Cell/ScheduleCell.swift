@@ -18,19 +18,21 @@ class ScheduleCell: UITableViewCell {
         return stack
     }()
     
-    lazy var hourLabel: UILabel = {
+    private lazy var hourLabel: UILabel = {
         let label = UILabel()
         label.text = "05"
         label.textColor = .white
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var minuteLabel: UILabel = {
+    private lazy var minuteLabel: UILabel = {
         let label = UILabel()
         label.text = "00"
         label.textColor = .white
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -45,7 +47,7 @@ class ScheduleCell: UITableViewCell {
         return stack
     }()
     
-    lazy var exerciseTitleLabel: UILabel = {
+    private lazy var exerciseTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "CROSSFIT"
         label.textColor = .gray
@@ -54,7 +56,7 @@ class ScheduleCell: UITableViewCell {
         return label
     }()
     
-    lazy var coachLabel: UILabel = {
+    private lazy var coachLabel: UILabel = {
         let label = UILabel()
         label.text = "FERNANDA"
         label.textColor = .gray
@@ -88,7 +90,7 @@ class ScheduleCell: UITableViewCell {
         return stack
     }()
     
-    lazy var spotsLabel: UILabel = {
+    private lazy var spotsLabel: UILabel = {
         let label = UILabel()
         label.text = "11"
         label.textColor = .gray
@@ -108,7 +110,7 @@ class ScheduleCell: UITableViewCell {
         return label
     }()
     
-    lazy var availableSpotsLabel: UILabel = {
+    private lazy var availableSpotsLabel: UILabel = {
         let label = UILabel()
         label.text = "22"
         label.textColor = .gray
@@ -130,7 +132,7 @@ class ScheduleCell: UITableViewCell {
     private lazy var disclosureImage: UIImageView = {
         let img = UIImageView()
         img.image = UIImage(systemName: "chevron.right")
-        img.tintColor = .white
+        img.tintColor = UIColor(named: "green")
         img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
@@ -156,11 +158,20 @@ class ScheduleCell: UITableViewCell {
         
         contentView.backgroundColor = UIColor(named: "dark")
         contentView.clipsToBounds = true
-        contentView.layer.cornerRadius = 5
+        contentView.layer.cornerRadius = 8
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(_ viewModel: ScheduleViewModel) {
+        hourLabel.text = viewModel.getHourTraining
+        minuteLabel.text = viewModel.getMinuteTraining
+        exerciseTitleLabel.text = viewModel.getTrainingName
+        coachLabel.text = viewModel.getCoachName
+        spotsLabel.text = viewModel.getSpots
+        availableSpotsLabel.text = viewModel.getAvailableSpots
     }
 }
 

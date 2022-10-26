@@ -23,7 +23,7 @@ class ScheduleScreen: UIView {
         return collectionView
     }()
     
-    private lazy var scheduleTableView: UITableView = {
+    lazy var scheduleTableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = UIColor(named: "light")
         table.bounces = false

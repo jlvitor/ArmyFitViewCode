@@ -18,7 +18,7 @@ final class ProfileCell: UITableViewCell {
         let view = UIView()
         view.backgroundColor = UIColor(named: "dark")
         view.clipsToBounds = true
-        view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
