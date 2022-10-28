@@ -103,6 +103,9 @@ extension ScheduleViewController: UICollectionViewDataSource {
 // MARK: - UITableViewDelegate
 extension ScheduleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ScheduleDetailViewController()
+        navigationController?.pushViewController(vc, animated: false)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
