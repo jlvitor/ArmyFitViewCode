@@ -8,58 +8,35 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
-    
-    //MARK: - Private properties
-    private var customTabBar: TabNavigationScreen!
-    private var tabBarHeight: CGFloat = 80.0
-    
-    //MARK: - Init`s
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadTabBar()
+        setupTabBar()
+        setupTabBarController()
     }
     
-    //MARK: - Private methods
-    private func loadTabBar() {
-        let tabItems: [TabItem] = [.home, .schedule, .training, .profile]
-        
-        self.setupCustomTabMenu(tabItems) { controllers in
-            self.viewControllers = controllers
-        }
-        
-        self.selectedIndex = 0
+    private func setupTabBar() {
+        self.tabBar.tintColor = UIColor(named: "green")
+        self.tabBar.unselectedItemTintColor = .gray
+        self.tabBar.backgroundColor = UIColor(named: "dark")
     }
     
-    private func setupCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> Void) {
-        let frame = tabBar.frame
-        var controllers = [UIViewController]()
+    private func setupTabBarController() {
+        let feedScreen = UINavigationController(rootViewController: FeedViewController())
+        let scheduleScreen = UINavigationController(rootViewController: ScheduleViewController())
+        let trainingScreen = UINavigationController(rootViewController: TrainingViewController())
+        let profileScreen = UINavigationController(rootViewController: ProfileViewController())
         
-        tabBar.isHidden = true
+        self.setViewControllers([
+            feedScreen,
+            scheduleScreen,
+            trainingScreen,
+            profileScreen], animated: false)
         
-        self.customTabBar = TabNavigationScreen(menuItems: menuItems, frame: frame)
-        self.customTabBar.clipsToBounds = true
-        self.customTabBar.itemTapped = self.changeTab(tab:)
-        self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
+        guard let items = tabBar.items else { return }
         
-        self.view.addSubview(customTabBar)
-        
-        NSLayoutConstraint.activate([
-            self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
-            self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
-            self.customTabBar.widthAnchor.constraint(equalToConstant: tabBar.frame.width),
-            self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight), // Fixed height for nav menu
-            self.customTabBar.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor)
-        ])
-        
-        for i in 0..<menuItems.count {
-            controllers.append(menuItems[i].viewController)
-        }
-        
-        self.view.layoutIfNeeded()
-        completion(controllers)
-    }
-    
-    private func changeTab(tab: Int) {
-        self.selectedIndex = tab
+        items[0].image = UIImage(systemName: "house.fill")
+        items[1].image = UIImage(systemName: "calendar")
+        items[2].image = UIImage(systemName: "bicycle.circle.fill")
+        items[3].image = UIImage(systemName: "person.crop.circle")
     }
 }

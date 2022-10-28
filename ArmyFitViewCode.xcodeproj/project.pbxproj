@@ -21,6 +21,7 @@
 		CC39EC0528E3FA70005AE3AB /* ArmyFitViewCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC0428E3FA70005AE3AB /* ArmyFitViewCodeTests.swift */; };
 		CC39EC0F28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */; };
 		CC39EC1128E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */; };
+		CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57477E290B6EE300B272B9 /* UserDetailCell.swift */; };
 		CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB328E513DF008E78BB /* RegisterViewController.swift */; };
 		CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */; };
 		CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB828E52281008E78BB /* TabBarViewController.swift */; };
@@ -39,10 +40,11 @@
 		CC59035928FCCDE400C9FEB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035828FCCDE400C9FEB1 /* Date+Extension.swift */; };
 		CC59035B28FCF29F00C9FEB1 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035A28FCF29F00C9FEB1 /* DayViewModel.swift */; };
 		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
+		CC6B49A42909F13800CBA70E /* ScheduleDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B49A32909F13800CBA70E /* ScheduleDetailScreen.swift */; };
+		CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */; };
 		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
 		CCB8D9A528FB6E290048BA6A /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8D9A428FB6E290048BA6A /* TabItem.swift */; };
-		CCB8D9A928FB70D80048BA6A /* TabNavigationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8D9A828FB70D80048BA6A /* TabNavigationScreen.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
@@ -102,6 +104,7 @@
 		CC39EC0A28E3FA70005AE3AB /* ArmyFitViewCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArmyFitViewCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITests.swift; sourceTree = "<group>"; };
 		CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC57477E290B6EE300B272B9 /* UserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCell.swift; sourceTree = "<group>"; };
 		CC585DB328E513DF008E78BB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CC585DB828E52281008E78BB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -122,10 +125,11 @@
 		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		CC6B499C2909E41100CBA70E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CC6B499D2909E42A00CBA70E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		CC6B49A32909F13800CBA70E /* ScheduleDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailScreen.swift; sourceTree = "<group>"; };
+		CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewController.swift; sourceTree = "<group>"; };
 		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCB8D9A428FB6E290048BA6A /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		CCB8D9A828FB70D80048BA6A /* TabNavigationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationScreen.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -342,6 +346,32 @@
 			path = Training;
 			sourceTree = "<group>";
 		};
+		CC6B499E2909E66600CBA70E /* ScheduleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CC6B499F2909E67C00CBA70E /* Screen */,
+				CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */,
+			);
+			path = ScheduleDetail;
+			sourceTree = "<group>";
+		};
+		CC6B499F2909E67C00CBA70E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC6B49A02909E68400CBA70E /* Cell */,
+				CC6B49A32909F13800CBA70E /* ScheduleDetailScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC6B49A02909E68400CBA70E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC57477E290B6EE300B272B9 /* UserDetailCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CC9B5FED28EA90C9004F4B55 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,18 +383,9 @@
 		CCB8D9A628FB70A10048BA6A /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				CCB8D9A728FB70BE0048BA6A /* Screen */,
 				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		CCB8D9A728FB70BE0048BA6A /* Screen */ = {
-			isa = PBXGroup;
-			children = (
-				CCB8D9A828FB70D80048BA6A /* TabNavigationScreen.swift */,
-			);
-			path = Screen;
 			sourceTree = "<group>";
 		};
 		CCC955C028E3FC510019250F /* Resources */ = {
@@ -395,6 +416,7 @@
 				CCB8D9A628FB70A10048BA6A /* TabBar */,
 				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
 				CC59034428FC939100C9FEB1 /* Schedule */,
+				CC6B499E2909E66600CBA70E /* ScheduleDetail */,
 				CC67D93128E69CB600AC90A0 /* Training */,
 				CC39388628E5EAB400CB3DBB /* Profile */,
 			);
@@ -766,16 +788,18 @@
 				CCFEAEC428EB3C6E0013D34F /* TrainingHours.swift in Sources */,
 				CC59035928FCCDE400C9FEB1 /* Date+Extension.swift in Sources */,
 				CC59034828FC93FB00C9FEB1 /* ScheduleCell.swift in Sources */,
+				CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */,
 				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
+				CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */,
 				CC59034C28FC943D00C9FEB1 /* ScheduleScreen.swift in Sources */,
 				CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */,
 				CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */,
-				CCB8D9A928FB70D80048BA6A /* TabNavigationScreen.swift in Sources */,
 				CCFEAEC728EB87370013D34F /* RegisterScreen.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
 				CCFEAEC928EB8E9C0013D34F /* RegisterViewModel.swift in Sources */,
 				CCFEAECE28EBC9970013D34F /* LoginScreen.swift in Sources */,
+				CC6B49A42909F13800CBA70E /* ScheduleDetailScreen.swift in Sources */,
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
 				CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */,
 				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
