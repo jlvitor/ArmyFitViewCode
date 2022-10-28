@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileScreen: UIView {
     
+    //MARK: - Private properties
     private lazy var greenView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(named: "green")
@@ -84,6 +85,7 @@ class ProfileScreen: UIView {
         return tableView
     }()
     
+    //MARK: - Init`s
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -93,6 +95,7 @@ class ProfileScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Public method
     func delegateTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         self.tableView.delegate = delegate
         self.tableView.dataSource = dataSource

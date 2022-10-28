@@ -38,13 +38,11 @@ class ScheduleViewController: UIViewController {
     }
     
     private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "green")
+        self.view.backgroundColor = UIColor(named: "light")
     }
     
     private func setupNavigationBar() {
         navigationItem.title = "Horários"
-        navigationController?.overrideUserInterfaceStyle = .dark
-        navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
     }
     
     private func configViewModel() {
@@ -104,6 +102,9 @@ extension ScheduleViewController: UICollectionViewDataSource {
 extension ScheduleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ScheduleDetailViewController()
+        let index = indexPath.row
+        vc.viewModel = viewModel.getTrainingHoursDetail(index)
+        
         navigationController?.pushViewController(vc, animated: false)
         
         tableView.deselectRow(at: indexPath, animated: true)

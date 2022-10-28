@@ -29,7 +29,6 @@ class TrainingViewController: UIViewController {
     
     private func setupNavigationBar() {
         navigationItem.title = "Treinos"
-        navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
     }
 }
 
@@ -49,7 +48,7 @@ extension TrainingViewController: ViewCode {
     
     func applyAdditionalChanges() {
         setupNavigationBar()
-        view.backgroundColor = UIColor(named: "green")
+        view.backgroundColor = UIColor(named: "light")
     }
 }
 
@@ -63,7 +62,7 @@ extension TrainingViewController: UITableViewDelegate {
 //MARK: - UITableViewDataSource
 extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 15
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -62,6 +62,13 @@ class SchedulesViewModel {
         return dateFormatted
     }
     
+    func getTrainingHoursDetail(_ index: Int?) -> ScheduleDetailViewModel? {
+        guard let index = index else { return nil }
+        
+        let trainingHoursId = trainingHoursList[index].id
+        return ScheduleDetailViewModel(trainingHoursId)
+    }
+    
     func getRemainingDaysInAMonth() {
         let currentDate = Date()
         let dateFormatter = DateFormatter()

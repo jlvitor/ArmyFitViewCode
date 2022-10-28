@@ -10,9 +10,11 @@ import MessageUI
 
 class ProfileViewController: UIViewController {
     
+    //MARK: - Private properties
     private var profileScreen: ProfileScreen?
     private let viewModel: ProfileViewModel = .init()
     
+    //MARK: - Init`s
     override func loadView() {
         super.loadView()
         self.profileScreen = ProfileScreen()
@@ -27,14 +29,13 @@ class ProfileViewController: UIViewController {
         viewModel.delegate = self
     }
     
+    //MARK: - Private methods
     private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "green")
+        self.view.backgroundColor = UIColor(named: "light")
     }
     
     private func setupNavigationBar() {
         navigationItem.title = "Perfil"
-        navigationController?.overrideUserInterfaceStyle = .dark
-        navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
         
         let barButtonItem = UIBarButtonItem(
             barButtonSystemItem: .compose,

@@ -16,12 +16,10 @@ class FeedViewController: UIViewController {
     }
     
     private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "green")
+        self.view.backgroundColor = UIColor(named: "light")
     }
     
     private func setupNavigationBar() {
         navigationItem.title = "Feed"
-        navigationController?.overrideUserInterfaceStyle = .dark
-        navigationController?.navigationBar.backgroundColor = UIColor(named: "green")
     }
 }

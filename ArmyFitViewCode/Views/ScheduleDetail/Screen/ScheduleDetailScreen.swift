@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol ScheduleDetailScreenProtocol: AnyObject {
+    func registerButtonAction()
+}
+
 class ScheduleDetailScreen: UIView {
+    
+    private weak var delegate: ScheduleDetailScreenProtocol?
     
     private lazy var detailView: UIView = {
         let view = UIView()
@@ -27,7 +33,6 @@ class ScheduleDetailScreen: UIView {
 
     private lazy var dateTexLabel: UILabel = {
         let label = UILabel()
-        label.text = "SEG"
         label.textColor = UIColor(named: "light")
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +41,6 @@ class ScheduleDetailScreen: UIView {
     
     private lazy var dateNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "16"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +68,6 @@ class ScheduleDetailScreen: UIView {
     
     private lazy var hourLabel: UILabel = {
         let label = UILabel()
-        label.text = "05"
         label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -74,7 +77,6 @@ class ScheduleDetailScreen: UIView {
     
     private lazy var minuteLabel: UILabel = {
         let label = UILabel()
-        label.text = "00"
         label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -94,7 +96,6 @@ class ScheduleDetailScreen: UIView {
     
     private lazy var coachLabel: UILabel = {
         let label = UILabel()
-        label.text = "Monitor(a): Fernanda"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -122,7 +123,6 @@ class ScheduleDetailScreen: UIView {
     
     private lazy var spotsLabel: UILabel = {
         let label = UILabel()
-        label.text = "11/20"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -151,11 +151,11 @@ class ScheduleDetailScreen: UIView {
     
     private lazy var registerTrainingButton: UIButton = {
         let btn = UIButton()
-        btn.setTitle("PARTICIPAR DO TREINO", for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         btn.backgroundColor = UIColor(named: "green")
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 8
+        btn.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -169,9 +169,27 @@ class ScheduleDetailScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configAllDelegates(tableDelegate: UITableViewDelegate, tableDataSource: UITableViewDataSource) {
-        detailTableView.delegate = tableDelegate
-        detailTableView.dataSource = tableDataSource
+    @objc private func tappedRegisterButton() {
+        self.delegate?.registerButtonAction()
+    }
+    
+    func configAllDelegates(
+        delegate: ScheduleDetailScreenProtocol?,
+        tableDelegate: UITableViewDelegate,
+        tableDataSource: UITableViewDataSource) {
+            self.delegate = delegate
+            detailTableView.delegate = tableDelegate
+            detailTableView.dataSource = tableDataSource
+        }
+    
+    func configScreen(_ viewModel: ScheduleDetailViewModel) {
+        dateTexLabel.text = viewModel.getDayName
+        dateNumberLabel.text = viewModel.getDayNumber
+        hourLabel.text = viewModel.getHourTraining
+        minuteLabel.text = viewModel.getMinuteTraining
+        coachLabel.text = viewModel.getCoachName
+        spotsLabel.text = viewModel.getSpots
+        registerTrainingButton.setTitle(viewModel.getRegisterButtonTitle(), for: .normal)
     }
 }
 

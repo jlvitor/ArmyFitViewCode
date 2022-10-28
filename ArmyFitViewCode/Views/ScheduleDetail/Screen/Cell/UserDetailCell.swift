@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserDetailCell: UITableViewCell {
 
@@ -54,6 +55,11 @@ class UserDetailCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(at index: Int, _ viewModel: RegisterTrainingViewModel) {
+        userImageView.kf.setImage(with: URL(string: viewModel.getUserImage(index)))
+        userNameLabel.text = viewModel.getUserName(index)
     }
 }
 
