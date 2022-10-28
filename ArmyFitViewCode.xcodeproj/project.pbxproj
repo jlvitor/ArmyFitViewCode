@@ -22,6 +22,8 @@
 		CC39EC0F28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */; };
 		CC39EC1128E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */; };
 		CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57477E290B6EE300B272B9 /* UserDetailCell.swift */; };
+		CC574782290B76CB00B272B9 /* ScheduleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC574781290B76CB00B272B9 /* ScheduleDetailViewModel.swift */; };
+		CC574784290B774B00B272B9 /* RegisterTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC574783290B774B00B272B9 /* RegisterTrainingViewModel.swift */; };
 		CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB328E513DF008E78BB /* RegisterViewController.swift */; };
 		CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */; };
 		CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB828E52281008E78BB /* TabBarViewController.swift */; };
@@ -44,7 +46,6 @@
 		CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */; };
 		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
-		CCB8D9A528FB6E290048BA6A /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8D9A428FB6E290048BA6A /* TabItem.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
@@ -105,6 +106,8 @@
 		CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITests.swift; sourceTree = "<group>"; };
 		CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC57477E290B6EE300B272B9 /* UserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCell.swift; sourceTree = "<group>"; };
+		CC574781290B76CB00B272B9 /* ScheduleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewModel.swift; sourceTree = "<group>"; };
+		CC574783290B774B00B272B9 /* RegisterTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTrainingViewModel.swift; sourceTree = "<group>"; };
 		CC585DB328E513DF008E78BB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CC585DB828E52281008E78BB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +132,6 @@
 		CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewController.swift; sourceTree = "<group>"; };
 		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		CCB8D9A428FB6E290048BA6A /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -278,6 +280,15 @@
 			path = ArmyFitViewCodeUITests;
 			sourceTree = "<group>";
 		};
+		CC574780290B76A800B272B9 /* ScheduleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CC574781290B76CB00B272B9 /* ScheduleDetailViewModel.swift */,
+				CC574783290B774B00B272B9 /* RegisterTrainingViewModel.swift */,
+			);
+			path = ScheduleDetail;
+			sourceTree = "<group>";
+		};
 		CC585DB528E51FC4008E78BB /* Entensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,14 +391,6 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		CCB8D9A628FB70A10048BA6A /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
 		CCC955C028E3FC510019250F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,8 +416,8 @@
 			children = (
 				CCFEAECB28EBC9850013D34F /* Login */,
 				CCFEAEC528EB87230013D34F /* Register */,
-				CCB8D9A628FB70A10048BA6A /* TabBar */,
-				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
+				CCF84B24290C47F9008E48D5 /* TabBar */,
+				CCF84B23290C47F0008E48D5 /* Feed */,
 				CC59034428FC939100C9FEB1 /* Schedule */,
 				CC6B499E2909E66600CBA70E /* ScheduleDetail */,
 				CC67D93128E69CB600AC90A0 /* Training */,
@@ -426,10 +429,11 @@
 		CCC955C328E3FEE70019250F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CCB8809E28F63467007EF254 /* LoginViewModel.swift */,
-				CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */,
+				CCF84B22290C47E2008E48D5 /* LoginViewModel */,
+				CCF84B21290C47D8008E48D5 /* RegisterViewModel */,
 				CC59035328FCCA7700C9FEB1 /* Schedule */,
-				CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */,
+				CC574780290B76A800B272B9 /* ScheduleDetail */,
+				CCF84B20290C47CC008E48D5 /* ProfileViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -450,9 +454,48 @@
 				CC9B5FED28EA90C9004F4B55 /* Constants */,
 				CC585DB528E51FC4008E78BB /* Entensions */,
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
-				CCB8D9A428FB6E290048BA6A /* TabItem.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CCF84B20290C47CC008E48D5 /* ProfileViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */,
+			);
+			path = ProfileViewModel;
+			sourceTree = "<group>";
+		};
+		CCF84B21290C47D8008E48D5 /* RegisterViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCFEAEC828EB8E9C0013D34F /* RegisterViewModel.swift */,
+			);
+			path = RegisterViewModel;
+			sourceTree = "<group>";
+		};
+		CCF84B22290C47E2008E48D5 /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8809E28F63467007EF254 /* LoginViewModel.swift */,
+			);
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
+		CCF84B23290C47F0008E48D5 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		CCF84B24290C47F9008E48D5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CC585DB828E52281008E78BB /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		CCFEAEA428EB3A990013D34F /* Login */ = {
@@ -765,6 +808,7 @@
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */,
+				CC574784290B774B00B272B9 /* RegisterTrainingViewModel.swift in Sources */,
 				CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */,
 				CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
@@ -791,6 +835,7 @@
 				CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */,
 				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
+				CC574782290B76CB00B272B9 /* ScheduleDetailViewModel.swift in Sources */,
 				CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */,
 				CC59034C28FC943D00C9FEB1 /* ScheduleScreen.swift in Sources */,
 				CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */,
@@ -803,7 +848,6 @@
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
 				CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */,
 				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
-				CCB8D9A528FB6E290048BA6A /* TabItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

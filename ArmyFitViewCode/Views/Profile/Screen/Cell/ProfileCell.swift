@@ -14,6 +14,7 @@ struct ProfileCellViewModel {
 
 final class ProfileCell: UITableViewCell {
     
+    //MARK: - Private properties
     private lazy var cellView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(named: "dark")
@@ -39,6 +40,7 @@ final class ProfileCell: UITableViewCell {
         return label
     }()
     
+    //MARK: - Init`s
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -63,12 +65,14 @@ final class ProfileCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Public method
     func configure(with model: ProfileCellViewModel) {
         cellImageView.image = model.icon
         cellLabel.text = model.label
     }
 }
 
+// MARK: - ViewCode
 extension ProfileCell: ViewCode {
     func buildHierarchy() {
         contentView.addSubview(cellView)
