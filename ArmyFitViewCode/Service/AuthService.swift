@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AuthService {
+class AuthService {
     
     private let baseUrl = "https://armyapi.herokuapp.com"
     private let profileImage: String = "l1nq.com/nMZxZ"

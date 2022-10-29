@@ -16,6 +16,7 @@ class TrainingScreen: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.registerCell(type: TrainingCell.self)
+        tableView.overrideUserInterfaceStyle = .dark
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()

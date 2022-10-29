@@ -9,6 +9,8 @@ import UIKit
 
 class TrainingDetailViewController: UIViewController {
     
+    var viewModel: TrainingViewModel?
+    
     private var trainingDetailScreen: TrainingDetailScreen?
     
     override func loadView() {
@@ -20,10 +22,17 @@ class TrainingDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackground()
+        setLabels()
     }
     
     //MARK: - Private methods
     private func setupBackground() {
         self.view.backgroundColor = UIColor(named: "light")
+    }
+    
+    private func setLabels() {
+        guard let viewModel else { return }
+        
+        trainingDetailScreen?.configureLabel(viewModel)
     }
 }

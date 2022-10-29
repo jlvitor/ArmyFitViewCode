@@ -30,6 +30,7 @@ class TrainingDetailScreen: UIView {
         let scroll = UIScrollView()
         scroll.isScrollEnabled = true
         scroll.showsVerticalScrollIndicator = false
+        scroll.bounces = false
         scroll.translatesAutoresizingMaskIntoConstraints = false
         return scroll
     }()
@@ -130,6 +131,12 @@ class TrainingDetailScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configureLabel(_ viewModel: TrainingViewModel) {
+        titleLabel.text = viewModel.getExerciseName.uppercased()
+        warningDescriptionLabel.text = viewModel.getWarning
+        trainingDescriptionLabel.text = viewModel.getDetail
+    }
 }
 
 extension TrainingDetailScreen: ViewCode {
@@ -161,7 +168,7 @@ extension TrainingDetailScreen: ViewCode {
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
             warningDescriptionLabel.topAnchor.constraint(equalTo: warningView.topAnchor, constant: 12),

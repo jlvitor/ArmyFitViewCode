@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TrainingCell: UITableViewCell {
+class TrainingCell: UITableViewCell {
 
     private lazy var hourStackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [hourLabel, minuteLabel])

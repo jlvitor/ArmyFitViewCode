@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class LoginViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     //MARK: - Private properties
     private var loginScreen: LoginScreen?

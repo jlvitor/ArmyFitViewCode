@@ -12,7 +12,7 @@ protocol RegisterScreenProtocol: AnyObject {
     func registerButtonAction()
 }
 
-final class RegisterScreen: UIView {
+class RegisterScreen: UIView {
     
     private weak var delegate: RegisterScreenProtocol?
     
