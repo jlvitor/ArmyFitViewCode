@@ -53,6 +53,12 @@ class TrainingViewController: UIViewController {
 
 //MARK: - UITableViewDelegate
 extension TrainingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = TrainingDetailViewController()
+        detailVC.modalPresentationStyle = .pageSheet
+        navigationController?.present(detailVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65
     }
