@@ -9,46 +9,45 @@ import UIKit
 
 class TrainingViewController: UIViewController {
     
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.backgroundColor = UIColor(named: "light")
-        tableView.bounces = false
-        tableView.showsVerticalScrollIndicator = false
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.registerCell(type: TrainingCell.self)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
+    //MARK: - Private properties
+    private var trainingScreen: TrainingScreen?
+    private let viewModel: TrainingsViewModel = .init()
+    
+    //MARK: - Init`s
+    override func loadView() {
+        super.loadView()
+        self.trainingScreen = TrainingScreen()
+        self.trainingScreen?.configAllDelegates(
+            delegate: self,
+            dataSource: self)
+        self.view = self.trainingScreen
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupBackground()
+        setupNavigationBar()
+        configViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.trainingUserSections = []
+        viewModel.fetchTrainingUser(Date.getCurrentDateToDateString())
+        trainingScreen?.tableView.reloadData()
+    }
+    
+    //MARK: - Private methods
+    private func setupBackground() {
+        self.view.backgroundColor = UIColor(named: "light")
     }
     
     private func setupNavigationBar() {
         navigationItem.title = "Treinos"
     }
-}
-
-extension TrainingViewController: ViewCode {
-    func buildHierarchy() {
-        view.addSubview(tableView)
-    }
     
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-    
-    func applyAdditionalChanges() {
-        setupNavigationBar()
-        view.backgroundColor = UIColor(named: "light")
+    private func configViewModel() {
+        viewModel.delegate = self
     }
 }
 
@@ -62,7 +61,7 @@ extension TrainingViewController: UITableViewDelegate {
 //MARK: - UITableViewDataSource
 extension TrainingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return viewModel.trainingUserSections[section].trainings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,6 +69,27 @@ extension TrainingViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let cellViewModel = viewModel.getTrainingCellViewModel(indexPath.section, indexPath.row)
+        trainingCell.configure(cellViewModel)
+        
+        trainingCell.selectionStyle = .none
+        trainingCell.backgroundColor = .clear
+        
         return trainingCell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.trainingUserSections.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.trainingUserSections[section].name
+    }
+}
+
+// MARK: - TrainingViewModelDelegate
+extension TrainingViewController: TrainingViewModelDelegate {
+    func reloadData() {
+        trainingScreen?.tableView.reloadData()
     }
 }
