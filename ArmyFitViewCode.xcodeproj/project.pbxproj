@@ -48,6 +48,7 @@
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
+		CCEC5F83290DA22B00C95431 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */; };
 		CCF14E5E290C96AE0048FF5E /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */; };
 		CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */; };
 		CCF14E63290C9BAC0048FF5E /* TrainingUserSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */; };
@@ -140,6 +141,7 @@
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
 		CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsViewModel.swift; sourceTree = "<group>"; };
 		CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUserSection.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				CC59035328FCCA7700C9FEB1 /* Schedule */,
 				CC574780290B76A800B272B9 /* ScheduleDetail */,
 				CCF14E5F290C9B370048FF5E /* TrainingViewModel */,
+				CCEC5F81290DA21800C95431 /* TrainingDetail */,
 				CCF84B20290C47CC008E48D5 /* ProfileViewModel */,
 			);
 			path = ViewModels;
@@ -470,6 +473,14 @@
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CCEC5F81290DA21800C95431 /* TrainingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */,
+			);
+			path = TrainingDetail;
 			sourceTree = "<group>";
 		};
 		CCF14E5B290C96870048FF5E /* Screen */ = {
@@ -861,6 +872,7 @@
 			files = (
 				CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */,
 				CCFEAEB928EB3BD90013D34F /* Post.swift in Sources */,
+				CCEC5F83290DA22B00C95431 /* TrainingViewModel.swift in Sources */,
 				CCFEAEC228EB3C5D0013D34F /* TrainingUser.swift in Sources */,
 				CCF14E69290CC81F0048FF5E /* TrainingDetailViewController.swift in Sources */,
 				CC59035228FCCA6F00C9FEB1 /* ScheduleViewModel.swift in Sources */,

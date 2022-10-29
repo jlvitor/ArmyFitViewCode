@@ -17,7 +17,7 @@ protocol PasswordValidationDelegate {
     func errorPasswordValidation()
 }
 
-final class RegisterViewModel {
+class RegisterViewModel {
     
     //MARK: - Private properti
     private let service: AuthService = .init()

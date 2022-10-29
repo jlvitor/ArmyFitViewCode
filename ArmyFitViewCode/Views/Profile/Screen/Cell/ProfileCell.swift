@@ -12,7 +12,7 @@ struct ProfileCellViewModel {
     let label: String
 }
 
-final class ProfileCell: UITableViewCell {
+class ProfileCell: UITableViewCell {
     
     //MARK: - Private properties
     private lazy var cellView: UIView = {

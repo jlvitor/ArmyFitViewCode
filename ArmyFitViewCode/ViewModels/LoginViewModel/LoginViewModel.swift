@@ -13,7 +13,7 @@ protocol LoginViewModelDelegate {
     func errorAuth()
 }
 
-final class LoginViewModel {
+class LoginViewModel {
     
     //MARK: - Private properties
     private let service: AuthService = .init()

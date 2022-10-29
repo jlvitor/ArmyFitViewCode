@@ -35,13 +35,13 @@ class TrainingsViewModel {
         return TrainingDetailViewModel(training)
     }
     
-//    func getTrainingDetail(_ section: Int?, _ index: Int?) -> TrainingViewModel? {
-//        guard let section = section,
-//              let index = index else { return nil }
-//
-//        let detail = trainingUserSections[section].trainings[index]
-//        return TrainingViewModel(trainingDetail: detail)
-//    }
+    func getTrainingDetail(_ section: Int?, _ index: Int?) -> TrainingViewModel? {
+        guard let section = section,
+              let index = index else { return nil }
+
+        let detail = trainingUserSections[section].trainings[index]
+        return TrainingViewModel(trainingDetail: detail)
+    }
     
     //MARK: - Private method
     private func organizeSections(trainings: [TrainingUser]) {

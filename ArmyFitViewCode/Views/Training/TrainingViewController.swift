@@ -55,6 +55,10 @@ class TrainingViewController: UIViewController {
 extension TrainingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = TrainingDetailViewController()
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        detailVC.viewModel = viewModel.getTrainingDetail(section, row)
         detailVC.modalPresentationStyle = .pageSheet
         navigationController?.present(detailVC, animated: true)
     }
