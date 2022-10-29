@@ -48,6 +48,10 @@
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
+		CCF14E5E290C96AE0048FF5E /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */; };
+		CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */; };
+		CCF14E63290C9BAC0048FF5E /* TrainingUserSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */; };
+		CCF14E65290C9BD50048FF5E /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E64290C9BD50048FF5E /* TrainingDetailViewModel.swift */; };
 		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
 		CCFEAEA328EB39890013D34F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA228EB39890013D34F /* User.swift */; };
 		CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA528EB3AAB0013D34F /* Authentication.swift */; };
@@ -134,6 +138,10 @@
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
+		CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsViewModel.swift; sourceTree = "<group>"; };
+		CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUserSection.swift; sourceTree = "<group>"; };
+		CCF14E64290C9BD50048FF5E /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
 		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CCFEAEA228EB39890013D34F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CCFEAEA528EB3AAB0013D34F /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -351,8 +359,8 @@
 		CC67D93128E69CB600AC90A0 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				CCF14E5B290C96870048FF5E /* Screen */,
 				CC585DBE28E522F0008E78BB /* TrainingViewController.swift */,
-				CC67D93228E69CD500AC90A0 /* TrainingCell.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -433,6 +441,7 @@
 				CCF84B21290C47D8008E48D5 /* RegisterViewModel */,
 				CC59035328FCCA7700C9FEB1 /* Schedule */,
 				CC574780290B76A800B272B9 /* ScheduleDetail */,
+				CCF14E5F290C9B370048FF5E /* TrainingViewModel */,
 				CCF84B20290C47CC008E48D5 /* ProfileViewModel */,
 			);
 			path = ViewModels;
@@ -456,6 +465,33 @@
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CCF14E5B290C96870048FF5E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CCF14E5C290C96920048FF5E /* Cell */,
+				CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CCF14E5C290C96920048FF5E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC67D93228E69CD500AC90A0 /* TrainingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CCF14E5F290C9B370048FF5E /* TrainingViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */,
+				CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */,
+				CCF14E64290C9BD50048FF5E /* TrainingDetailViewModel.swift */,
+			);
+			path = TrainingViewModel;
 			sourceTree = "<group>";
 		};
 		CCF84B20290C47CC008E48D5 /* ProfileViewModel */ = {
@@ -834,6 +870,8 @@
 				CC59034828FC93FB00C9FEB1 /* ScheduleCell.swift in Sources */,
 				CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */,
 				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
+				CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */,
+				CCF14E63290C9BAC0048FF5E /* TrainingUserSection.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
 				CC574782290B76CB00B272B9 /* ScheduleDetailViewModel.swift in Sources */,
 				CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */,
@@ -844,6 +882,8 @@
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
 				CCFEAEC928EB8E9C0013D34F /* RegisterViewModel.swift in Sources */,
 				CCFEAECE28EBC9970013D34F /* LoginScreen.swift in Sources */,
+				CCF14E65290C9BD50048FF5E /* TrainingDetailViewModel.swift in Sources */,
+				CCF14E5E290C96AE0048FF5E /* TrainingScreen.swift in Sources */,
 				CC6B49A42909F13800CBA70E /* ScheduleDetailScreen.swift in Sources */,
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
 				CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */,

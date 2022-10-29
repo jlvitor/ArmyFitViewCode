@@ -45,7 +45,7 @@ class ScheduleDetailViewController: UIViewController {
     
     // MARK: - Private methods
     private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "dark")
+        self.view.backgroundColor = UIColor(named: "light")
     }
     
     private func setupNavigationBar() {
