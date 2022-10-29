@@ -52,6 +52,8 @@
 		CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */; };
 		CCF14E63290C9BAC0048FF5E /* TrainingUserSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */; };
 		CCF14E65290C9BD50048FF5E /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E64290C9BD50048FF5E /* TrainingDetailViewModel.swift */; };
+		CCF14E69290CC81F0048FF5E /* TrainingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E68290CC81F0048FF5E /* TrainingDetailViewController.swift */; };
+		CCF14E6B290CC8310048FF5E /* TrainingDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E6A290CC8310048FF5E /* TrainingDetailScreen.swift */; };
 		CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA028EB38160013D34F /* AuthService.swift */; };
 		CCFEAEA328EB39890013D34F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA228EB39890013D34F /* User.swift */; };
 		CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEAEA528EB3AAB0013D34F /* Authentication.swift */; };
@@ -142,6 +144,8 @@
 		CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsViewModel.swift; sourceTree = "<group>"; };
 		CCF14E62290C9BAC0048FF5E /* TrainingUserSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingUserSection.swift; sourceTree = "<group>"; };
 		CCF14E64290C9BD50048FF5E /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
+		CCF14E68290CC81F0048FF5E /* TrainingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewController.swift; sourceTree = "<group>"; };
+		CCF14E6A290CC8310048FF5E /* TrainingDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailScreen.swift; sourceTree = "<group>"; };
 		CCFEAEA028EB38160013D34F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CCFEAEA228EB39890013D34F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CCFEAEA528EB3AAB0013D34F /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -429,6 +433,7 @@
 				CC59034428FC939100C9FEB1 /* Schedule */,
 				CC6B499E2909E66600CBA70E /* ScheduleDetail */,
 				CC67D93128E69CB600AC90A0 /* Training */,
+				CCF14E66290CC7F80048FF5E /* TrainingDetail */,
 				CC39388628E5EAB400CB3DBB /* Profile */,
 			);
 			path = Views;
@@ -492,6 +497,23 @@
 				CCF14E64290C9BD50048FF5E /* TrainingDetailViewModel.swift */,
 			);
 			path = TrainingViewModel;
+			sourceTree = "<group>";
+		};
+		CCF14E66290CC7F80048FF5E /* TrainingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CCF14E67290CC8040048FF5E /* Screen */,
+				CCF14E68290CC81F0048FF5E /* TrainingDetailViewController.swift */,
+			);
+			path = TrainingDetail;
+			sourceTree = "<group>";
+		};
+		CCF14E67290CC8040048FF5E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CCF14E6A290CC8310048FF5E /* TrainingDetailScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		CCF84B20290C47CC008E48D5 /* ProfileViewModel */ = {
@@ -840,6 +862,7 @@
 				CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */,
 				CCFEAEB928EB3BD90013D34F /* Post.swift in Sources */,
 				CCFEAEC228EB3C5D0013D34F /* TrainingUser.swift in Sources */,
+				CCF14E69290CC81F0048FF5E /* TrainingDetailViewController.swift in Sources */,
 				CC59035228FCCA6F00C9FEB1 /* ScheduleViewModel.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
@@ -870,6 +893,7 @@
 				CC59034828FC93FB00C9FEB1 /* ScheduleCell.swift in Sources */,
 				CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */,
 				CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */,
+				CCF14E6B290CC8310048FF5E /* TrainingDetailScreen.swift in Sources */,
 				CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */,
 				CCF14E63290C9BAC0048FF5E /* TrainingUserSection.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
