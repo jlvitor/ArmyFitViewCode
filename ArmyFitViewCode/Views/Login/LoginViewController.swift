@@ -28,6 +28,11 @@ class LoginViewController: UIViewController {
         setupBackground()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     //MARK: - Private method
     private func configViewModel() {
         viewModel.delegate = self
