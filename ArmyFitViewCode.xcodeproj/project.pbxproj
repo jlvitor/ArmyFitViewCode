@@ -41,6 +41,11 @@
 		CC59035728FCCD3700C9FEB1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035628FCCD3700C9FEB1 /* String+Extension.swift */; };
 		CC59035928FCCDE400C9FEB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035828FCCDE400C9FEB1 /* Date+Extension.swift */; };
 		CC59035B28FCF29F00C9FEB1 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59035A28FCF29F00C9FEB1 /* DayViewModel.swift */; };
+		CC59A9262910AAD30040B83D /* FeedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59A9252910AAD30040B83D /* FeedScreen.swift */; };
+		CC59A9282910B32A0040B83D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59A9272910B32A0040B83D /* PostCell.swift */; };
+		CC59A92B2910C31E0040B83D /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59A92A2910C31E0040B83D /* PostViewModel.swift */; };
+		CC59A92D2910C4F10040B83D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59A92C2910C4F10040B83D /* FeedViewModel.swift */; };
+		CC59A92F2910C53E0040B83D /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59A92E2910C53E0040B83D /* PostService.swift */; };
 		CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC67D93228E69CD500AC90A0 /* TrainingCell.swift */; };
 		CC6B49A42909F13800CBA70E /* ScheduleDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B49A32909F13800CBA70E /* ScheduleDetailScreen.swift */; };
 		CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */; };
@@ -132,6 +137,11 @@
 		CC59035628FCCD3700C9FEB1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CC59035828FCCDE400C9FEB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		CC59035A28FCF29F00C9FEB1 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
+		CC59A9252910AAD30040B83D /* FeedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedScreen.swift; sourceTree = "<group>"; };
+		CC59A9272910B32A0040B83D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		CC59A92A2910C31E0040B83D /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		CC59A92C2910C4F10040B83D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		CC59A92E2910C53E0040B83D /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		CC67D93228E69CD500AC90A0 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		CC6B499C2909E41100CBA70E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CC6B499D2909E42A00CBA70E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
@@ -362,6 +372,32 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
+		CC59A9232910AAB00040B83D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC59A9242910AAB80040B83D /* Cell */,
+				CC59A9252910AAD30040B83D /* FeedScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC59A9242910AAB80040B83D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC59A9272910B32A0040B83D /* PostCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC59A9292910C3090040B83D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				CC59A92A2910C31E0040B83D /* PostViewModel.swift */,
+				CC59A92C2910C4F10040B83D /* FeedViewModel.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		CC67D93128E69CB600AC90A0 /* Training */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +482,7 @@
 			children = (
 				CCF84B22290C47E2008E48D5 /* LoginViewModel */,
 				CCF84B21290C47D8008E48D5 /* RegisterViewModel */,
+				CC59A9292910C3090040B83D /* Feed */,
 				CC59035328FCCA7700C9FEB1 /* Schedule */,
 				CC574780290B76A800B272B9 /* ScheduleDetail */,
 				CCF14E5F290C9B370048FF5E /* TrainingViewModel */,
@@ -459,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				CCFEAEA028EB38160013D34F /* AuthService.swift */,
+				CC59A92E2910C53E0040B83D /* PostService.swift */,
 				CC59035428FCCC2200C9FEB1 /* TrainingHoursService.swift */,
 				CCC955C128E3FEAB0019250F /* Models */,
 			);
@@ -554,6 +592,7 @@
 		CCF84B23290C47F0008E48D5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				CC59A9232910AAB00040B83D /* Screen */,
 				CC585DBA28E522C8008E78BB /* FeedViewController.swift */,
 			);
 			path = Feed;
@@ -877,6 +916,7 @@
 				CCF14E69290CC81F0048FF5E /* TrainingDetailViewController.swift in Sources */,
 				CC59035228FCCA6F00C9FEB1 /* ScheduleViewModel.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
+				CC59A9282910B32A0040B83D /* PostCell.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */,
 				CC574784290B774B00B272B9 /* RegisterTrainingViewModel.swift in Sources */,
@@ -885,8 +925,10 @@
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
 				CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */,
 				CC59035B28FCF29F00C9FEB1 /* DayViewModel.swift in Sources */,
+				CC59A92D2910C4F10040B83D /* FeedViewModel.swift in Sources */,
 				CC59034628FC93E200C9FEB1 /* DateCell.swift in Sources */,
 				CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */,
+				CC59A92B2910C31E0040B83D /* PostViewModel.swift in Sources */,
 				CCFEAEBB28EB3BE40013D34F /* LikePost.swift in Sources */,
 				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
@@ -918,12 +960,14 @@
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
 				CCFEAEC928EB8E9C0013D34F /* RegisterViewModel.swift in Sources */,
 				CCFEAECE28EBC9970013D34F /* LoginScreen.swift in Sources */,
+				CC59A92F2910C53E0040B83D /* PostService.swift in Sources */,
 				CCF14E65290C9BD50048FF5E /* TrainingDetailViewModel.swift in Sources */,
 				CCF14E5E290C96AE0048FF5E /* TrainingScreen.swift in Sources */,
 				CC6B49A42909F13800CBA70E /* ScheduleDetailScreen.swift in Sources */,
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
 				CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */,
 				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
+				CC59A9262910AAD30040B83D /* FeedScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
