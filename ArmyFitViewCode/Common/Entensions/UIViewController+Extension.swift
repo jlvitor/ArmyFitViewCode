@@ -1,5 +1,5 @@
 //
-//  UIViewControllerExtensions.swift
+//  UIViewController+Extension.swift
 //  ArmyFitViewCode
 //
 //  Created by Jean Lucas Vitor on 28/09/22.

@@ -12,7 +12,7 @@
 		CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */; };
 		CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */; };
 		CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */; };
-		CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */; };
+		CC39388528E5EA9000CB3DBB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388428E5EA9000CB3DBB /* UITableView+Extension.swift */; };
 		CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388728E5EADF00CB3DBB /* ProfileCell.swift */; };
 		CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */; };
 		CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EBEF28E3FA6F005AE3AB /* SceneDelegate.swift */; };
@@ -21,11 +21,13 @@
 		CC39EC0528E3FA70005AE3AB /* ArmyFitViewCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC0428E3FA70005AE3AB /* ArmyFitViewCodeTests.swift */; };
 		CC39EC0F28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */; };
 		CC39EC1128E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */; };
+		CC4A2F60291841CF00650C3E /* PostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F5F291841CF00650C3E /* PostScreen.swift */; };
+		CC4A2F6329185E7600650C3E /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F6229185E7600650C3E /* NewPostViewModel.swift */; };
 		CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57477E290B6EE300B272B9 /* UserDetailCell.swift */; };
 		CC574782290B76CB00B272B9 /* ScheduleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC574781290B76CB00B272B9 /* ScheduleDetailViewModel.swift */; };
 		CC574784290B774B00B272B9 /* RegisterTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC574783290B774B00B272B9 /* RegisterTrainingViewModel.swift */; };
 		CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB328E513DF008E78BB /* RegisterViewController.swift */; };
-		CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */; };
+		CC585DB728E52032008E78BB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB628E52032008E78BB /* UIViewController+Extension.swift */; };
 		CC585DB928E52281008E78BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DB828E52281008E78BB /* TabBarViewController.swift */; };
 		CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBA28E522C8008E78BB /* FeedViewController.swift */; };
 		CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */; };
@@ -51,6 +53,7 @@
 		CC6B49A62909F3B900CBA70E /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */; };
 		CC9B5FEF28EA90D6004F4B55 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B5FEE28EA90D6004F4B55 /* Errors.swift */; };
 		CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8809E28F63467007EF254 /* LoginViewModel.swift */; };
+		CCC73E7829121C1D00CA6ECB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC73E7729121C1D00CA6ECB /* PostViewController.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
 		CCEC5F83290DA22B00C95431 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */; };
@@ -105,7 +108,7 @@
 		CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		CC39388428E5EA9000CB3DBB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		CC39388728E5EADF00CB3DBB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		CC39EBEA28E3FA6F005AE3AB /* ArmyFitViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmyFitViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,11 +120,13 @@
 		CC39EC0A28E3FA70005AE3AB /* ArmyFitViewCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArmyFitViewCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC39EC0E28E3FA70005AE3AB /* ArmyFitViewCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITests.swift; sourceTree = "<group>"; };
 		CC39EC1028E3FA70005AE3AB /* ArmyFitViewCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyFitViewCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC4A2F5F291841CF00650C3E /* PostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostScreen.swift; sourceTree = "<group>"; };
+		CC4A2F6229185E7600650C3E /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 		CC57477E290B6EE300B272B9 /* UserDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCell.swift; sourceTree = "<group>"; };
 		CC574781290B76CB00B272B9 /* ScheduleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewModel.swift; sourceTree = "<group>"; };
 		CC574783290B774B00B272B9 /* RegisterTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTrainingViewModel.swift; sourceTree = "<group>"; };
 		CC585DB328E513DF008E78BB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		CC585DB628E52032008E78BB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		CC585DB828E52281008E78BB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CC585DBA28E522C8008E78BB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		CC585DBC28E522DD008E78BB /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 		CC6B49A52909F3B900CBA70E /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewController.swift; sourceTree = "<group>"; };
 		CC9B5FEE28EA90D6004F4B55 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CCB8809E28F63467007EF254 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CCC73E7729121C1D00CA6ECB /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
@@ -304,6 +310,14 @@
 			path = ArmyFitViewCodeUITests;
 			sourceTree = "<group>";
 		};
+		CC4A2F6129185E6000650C3E /* PostViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A2F6229185E7600650C3E /* NewPostViewModel.swift */,
+			);
+			path = PostViewModel;
+			sourceTree = "<group>";
+		};
 		CC574780290B76A800B272B9 /* ScheduleDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,8 +330,8 @@
 		CC585DB528E51FC4008E78BB /* Entensions */ = {
 			isa = PBXGroup;
 			children = (
-				CC585DB628E52032008E78BB /* UIViewControllerExtensions.swift */,
-				CC39388428E5EA9000CB3DBB /* UITableView+Extensions.swift */,
+				CC585DB628E52032008E78BB /* UIViewController+Extension.swift */,
+				CC39388428E5EA9000CB3DBB /* UITableView+Extension.swift */,
 				CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */,
 				CC59034D28FC995100C9FEB1 /* UICollectionView+Extension.swift */,
 				CC59035628FCCD3700C9FEB1 /* String+Extension.swift */,
@@ -441,6 +455,23 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		CCC73E752912194600CA6ECB /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				CCC73E762912195000CA6ECB /* Screen */,
+				CCC73E7729121C1D00CA6ECB /* PostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		CCC73E762912195000CA6ECB /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A2F5F291841CF00650C3E /* PostScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		CCC955C028E3FC510019250F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +499,7 @@
 				CCFEAEC528EB87230013D34F /* Register */,
 				CCF84B24290C47F9008E48D5 /* TabBar */,
 				CCF84B23290C47F0008E48D5 /* Feed */,
+				CCC73E752912194600CA6ECB /* Post */,
 				CC59034428FC939100C9FEB1 /* Schedule */,
 				CC6B499E2909E66600CBA70E /* ScheduleDetail */,
 				CC67D93128E69CB600AC90A0 /* Training */,
@@ -483,6 +515,7 @@
 				CCF84B22290C47E2008E48D5 /* LoginViewModel */,
 				CCF84B21290C47D8008E48D5 /* RegisterViewModel */,
 				CC59A9292910C3090040B83D /* Feed */,
+				CC4A2F6129185E6000650C3E /* PostViewModel */,
 				CC59035328FCCA7700C9FEB1 /* Schedule */,
 				CC574780290B76A800B272B9 /* ScheduleDetail */,
 				CCF14E5F290C9B370048FF5E /* TrainingViewModel */,
@@ -909,6 +942,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4A2F6329185E7600650C3E /* NewPostViewModel.swift in Sources */,
 				CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */,
 				CCFEAEB928EB3BD90013D34F /* Post.swift in Sources */,
 				CCEC5F83290DA22B00C95431 /* TrainingViewModel.swift in Sources */,
@@ -917,22 +951,24 @@
 				CC59035228FCCA6F00C9FEB1 /* ScheduleViewModel.swift in Sources */,
 				CC585DBF28E522F0008E78BB /* TrainingViewController.swift in Sources */,
 				CC59A9282910B32A0040B83D /* PostCell.swift in Sources */,
+				CC4A2F60291841CF00650C3E /* PostScreen.swift in Sources */,
 				CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */,
 				CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */,
 				CC574784290B774B00B272B9 /* RegisterTrainingViewModel.swift in Sources */,
 				CCFEAEA628EB3AAB0013D34F /* Authentication.swift in Sources */,
 				CCFEAEA128EB38160013D34F /* AuthService.swift in Sources */,
 				CC585DB428E513DF008E78BB /* RegisterViewController.swift in Sources */,
-				CC39388528E5EA9000CB3DBB /* UITableView+Extensions.swift in Sources */,
+				CC39388528E5EA9000CB3DBB /* UITableView+Extension.swift in Sources */,
 				CC59035B28FCF29F00C9FEB1 /* DayViewModel.swift in Sources */,
 				CC59A92D2910C4F10040B83D /* FeedViewModel.swift in Sources */,
 				CC59034628FC93E200C9FEB1 /* DateCell.swift in Sources */,
 				CC67D93328E69CD500AC90A0 /* TrainingCell.swift in Sources */,
 				CC59A92B2910C31E0040B83D /* PostViewModel.swift in Sources */,
 				CCFEAEBB28EB3BE40013D34F /* LikePost.swift in Sources */,
-				CC585DB728E52032008E78BB /* UIViewControllerExtensions.swift in Sources */,
+				CC585DB728E52032008E78BB /* UIViewController+Extension.swift in Sources */,
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */,
+				CCC73E7829121C1D00CA6ECB /* PostViewController.swift in Sources */,
 				CC59034E28FC995100C9FEB1 /* UICollectionView+Extension.swift in Sources */,
 				CC59035528FCCC2200C9FEB1 /* TrainingHoursService.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,

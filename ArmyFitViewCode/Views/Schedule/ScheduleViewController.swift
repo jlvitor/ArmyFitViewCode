@@ -105,7 +105,7 @@ extension ScheduleViewController: UITableViewDelegate {
         let index = indexPath.row
         vc.viewModel = viewModel.getTrainingHoursDetail(index)
         
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

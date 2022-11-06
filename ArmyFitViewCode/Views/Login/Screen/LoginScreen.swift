@@ -213,12 +213,12 @@ class LoginScreen: UIView {
     private func configGestureToNavigate() {
         let tap = UITapGestureRecognizer(
             target: self,
-            action: #selector(tapAction(_:))
+            action: #selector(tapNewAccountAction(_:))
         )
         self.newAccountStackView.addGestureRecognizer(tap)
     }
     
-    @objc private func tapAction(_ sender: UITapGestureRecognizer) {
+    @objc private func tapNewAccountAction(_ sender: UITapGestureRecognizer) {
         self.delegate?.goToRegisterScreen()
     }
     

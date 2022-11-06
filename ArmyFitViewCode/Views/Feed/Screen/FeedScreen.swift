@@ -8,7 +8,13 @@
 import UIKit
 import Kingfisher
 
+protocol FeedScreenProtocol: AnyObject {
+    func newPost()
+}
+
 class FeedScreen: UIView {
+    
+    private weak var delegate: FeedScreenProtocol?
     
     private lazy var userPostView: UIView = {
         let view = UIView()
@@ -67,13 +73,28 @@ class FeedScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configAllDelegate(_ delegate: UICollectionViewDelegate, _ dataSource: UICollectionViewDataSource) {
-        postCollectionView.delegate = delegate
-        postCollectionView.dataSource = dataSource
-    }
+    func configAllDelegate(
+        delegate: UICollectionViewDelegate,
+        dataSource: UICollectionViewDataSource,
+        newPostDelegate: FeedScreenProtocol) {
+            postCollectionView.delegate = delegate
+            postCollectionView.dataSource = dataSource
+            self.delegate = newPostDelegate
+        }
     
     func configUserImage(_ viewModel: FeedViewModel) {
         userImageView.kf.setImage(with: URL(string: viewModel.getUserImage))
+    }
+    
+    private func configGestureRecognizer() {
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(tapNewPostAcion(_:)))
+        self.userPostView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func tapNewPostAcion(_ sender: UITapGestureRecognizer) {
+        self.delegate?.newPost()
     }
 }
 
@@ -111,5 +132,9 @@ extension FeedScreen: ViewCode {
             postCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             postCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
+    }
+    
+    func applyAdditionalChanges() {
+        configGestureRecognizer()
     }
 }

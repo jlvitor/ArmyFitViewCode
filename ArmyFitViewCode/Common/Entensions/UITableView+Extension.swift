@@ -1,5 +1,5 @@
 //
-//  UITableView+Extensions.swift
+//  UITableView+Extension.swift
 //  ArmyFitViewCode
 //
 //  Created by Jean Lucas Vitor on 29/09/22.
