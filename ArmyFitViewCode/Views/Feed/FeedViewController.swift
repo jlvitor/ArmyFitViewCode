@@ -17,7 +17,10 @@ class FeedViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.feedScreen = FeedScreen()
-        self.feedScreen?.configAllDelegate(self, self)
+        self.feedScreen?.configAllDelegate(
+            delegate: self,
+            dataSource: self,
+            newPostDelegate: self)
         self.feedScreen?.configUserImage(viewModel)
         self.view = self.feedScreen
     }
@@ -107,5 +110,13 @@ extension FeedViewController: ButtonPressedDelegate {
     
     func commentButton() {
         print("comentario")
+    }
+}
+
+// MARK: - FeedScreenProtocol
+extension FeedViewController: FeedScreenProtocol {
+    func newPost() {
+        let vc: PostViewController = .init()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

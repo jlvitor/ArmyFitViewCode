@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
 //MARK: - LoginScreenProtocol
 extension LoginViewController: LoginScreenProtocol {
     func goToRegisterScreen() {
-        let vc: RegisterViewController = RegisterViewController()
+        let vc: RegisterViewController = .init()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
