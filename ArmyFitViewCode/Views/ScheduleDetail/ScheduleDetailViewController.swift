@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScheduleDetailViewController: UIViewController {
+class ScheduleDetailViewController: BaseViewController {
     
     //MARK: - Public propertie
     var viewModel: ScheduleDetailViewModel?
@@ -28,8 +28,6 @@ class ScheduleDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
-        setupNavigationBar()
         configViewModel()
     }
     
@@ -44,14 +42,6 @@ class ScheduleDetailViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
-    }
-    
-    private func setupNavigationBar() {
-        navigationController?.navigationBar.tintColor = .white
-    }
-    
     private func configViewModel() {
         guard let viewModel = viewModel else { return }
         

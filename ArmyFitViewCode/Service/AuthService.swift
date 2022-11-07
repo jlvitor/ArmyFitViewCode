@@ -9,12 +9,11 @@ import Foundation
 
 class AuthService {
     
-    private let baseUrl = "https://armyapi.herokuapp.com"
-    private let profileImage: String = "l1nq.com/nMZxZ"
+    private let baseUrl = "https://armyapi.herokuapp.com/"
     
     // Registra o usuário no app/ bando de dados do app
-    func registerUser(name: String, email: String, password: String, photoUrl: String?, completion: @escaping (User?, Error?) -> Void) {
-        guard let url = URL(string: "\(baseUrl)/users") else { return }
+    func registerUser(name: String, email: String, password: String, photoUrl: String, completion: @escaping (User?, Error?) -> Void) {
+        guard let url = URL(string: "\(baseUrl)users") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -22,7 +21,7 @@ class AuthService {
         let body: [String: String] = [
             "name": name,
             "email": email,
-            "photoUrl": photoUrl ?? profileImage,
+            "photoUrl": photoUrl,
             "password": password
         ]
         
@@ -45,7 +44,7 @@ class AuthService {
     
     // Valida o usuario para poder logar no app
     func authUser(email: String, password:  String, completion:  @escaping (Authentication?, Error?) -> Void) {
-        guard let url = URL(string: "\(baseUrl)/login") else { return }
+        guard let url = URL(string: "\(baseUrl)login") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

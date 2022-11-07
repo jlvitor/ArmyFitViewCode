@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScheduleViewController: UIViewController {
+class ScheduleViewController: BaseViewController {
     
     private var scheduleScreen: ScheduleScreen?
     private let viewModel: SchedulesViewModel = .init()
@@ -26,8 +26,7 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configViewModel()
-        setupBackground()
-        setupNavigationBar()
+        setupNavigationBar("Horários")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,14 +34,6 @@ class ScheduleViewController: UIViewController {
         if let date = viewModel.date {
             viewModel.fetchTrainingsHours(date)
         }
-    }
-    
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
-    }
-    
-    private func setupNavigationBar() {
-        navigationItem.title = "Horários"
     }
     
     private func configViewModel() {

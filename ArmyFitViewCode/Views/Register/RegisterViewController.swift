@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
     
     //MARK: - Private properties
     private var registerScreen: RegisterScreen?
@@ -22,21 +22,15 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
-        setupBackground()
-        configNavigationBar()
         configViewModel()
+        setupNavigationBar(barIsHidden: true)
+    }
+    
+    override func configBackgroundColor() {
+        self.view.backgroundColor = UIColor(named: "dark")
     }
     
     //MARK: - Private methods
-    private func setupBackground() {
-        view.backgroundColor = UIColor(named: "dark")
-    }
-    
-    private func configNavigationBar() {
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
     private func configViewModel() {
         viewModel.delegate = self
         viewModel.validationDelegate = self

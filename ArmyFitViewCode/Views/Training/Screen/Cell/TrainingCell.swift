@@ -23,6 +23,7 @@ class TrainingCell: UITableViewCell {
         let label = UILabel()
         label.text = "05"
         label.textColor = .white
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -32,6 +33,7 @@ class TrainingCell: UITableViewCell {
         let label = UILabel()
         label.text = "00"
         label.textColor = .white
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

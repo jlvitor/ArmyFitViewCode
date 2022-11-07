@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileScreen: UIView {
     
@@ -35,7 +36,6 @@ class ProfileScreen: UIView {
     
     private lazy var profileImageView: UIImageView = {
         let img = UIImageView()
-        img.image = UIImage(named: "jean")
         img.clipsToBounds = true
         img.layer.cornerRadius = 60
         img.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +64,7 @@ class ProfileScreen: UIView {
     
     private lazy var statusLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ativo"
+        label.text = "ATIVO"
         label.textColor = UIColor(named: "green")
         label.font = UIFont.systemFont(ofSize: 17)
         label.numberOfLines = 1
@@ -99,6 +99,11 @@ class ProfileScreen: UIView {
     func delegateTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         self.tableView.delegate = delegate
         self.tableView.dataSource = dataSource
+    }
+    
+    func configUserLabel(_ viewModel: ProfileViewModel) {
+        profileImageView.kf.setImage(with: URL(string: viewModel.getUserImage))
+        nameLabel.text = viewModel.getUserName
     }
 }
 

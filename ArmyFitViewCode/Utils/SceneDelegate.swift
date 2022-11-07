@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        self.window?.overrideUserInterfaceStyle = .dark
         self.window = UIWindow(windowScene: windowScene)
         
         if isLogged {
@@ -28,6 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             self.window?.rootViewController = UINavigationController(rootViewController: loginVC)
             self.window?.makeKeyAndVisible()
+        }
+        
+        if #available(iOS 13.0, *) {
+            self.window?.overrideUserInterfaceStyle = .dark
         }
     }
     

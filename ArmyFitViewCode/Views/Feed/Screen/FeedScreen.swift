@@ -83,7 +83,7 @@ class FeedScreen: UIView {
         }
     
     func configUserImage(_ viewModel: FeedViewModel) {
-        userImageView.kf.setImage(with: URL(string: viewModel.getUserImage))
+        userImageView.kf.setImage(with: URL(string: viewModel.getUserImage!))
     }
     
     private func configGestureRecognizer() {
