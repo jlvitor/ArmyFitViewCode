@@ -31,8 +31,8 @@ class FeedViewModel {
         postsList.count
     }
     
-    var getUserImage: String {
-        UserDefaults.getValue(key: UserDefaults.Keys.userPhoto) as? String ?? "profile"
+    var getUserImage: String? {
+        UserDefaults.getValue(key: UserDefaults.Keys.userPhoto) as? String
     }
     
     //MARK: - Public methods

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
+class PostViewController: BaseViewController {
     
     private var postScreen: PostScreen?
     private let viewModel: NewPostViewModel = .init()
@@ -24,8 +24,8 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
-        setupNavigationBar()
+        setupBarButton()
+        setupNavigationBar("Criar publicação")
         configViewModel()
     }
     
@@ -40,15 +40,11 @@ class PostViewController: UIViewController {
     }
     
     //MARK: - Private methods
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
-    }
-    
-    private func setupNavigationBar() {
-        navigationItem.title = "Criar publicação"
-        navigationController?.navigationBar.tintColor = .white
+    private func setupBarButton() {
+        let barButtonItem = UIBarButtonItem(
+            customView: postScreen?.publishButton ?? UIView()
+        )
         
-        let barButtonItem = UIBarButtonItem(customView: postScreen?.publishButton ?? UIView())
         let currWidth = barButtonItem.customView?.widthAnchor.constraint(equalToConstant: 80)
         currWidth?.isActive = true
         
@@ -70,6 +66,20 @@ class PostViewController: UIViewController {
             style: .cancel) { action in
                 self.navigationController?.popViewController(animated: true)
         }
+        
+        error.addAction(confirm)
+        present(error, animated: true)
+    }
+    
+    private func empityAlert() {
+        let error = UIAlertController(
+            title: "Opa, tem algo estranho!",
+            message: "Parece que você esqueceu de alguma coisa, que tal escrever uma mensagem para seus colegas de treino?",
+            preferredStyle: .alert)
+        
+        let confirm = UIAlertAction(
+            title: "OK",
+            style: .cancel)
         
         error.addAction(confirm)
         present(error, animated: true)
@@ -108,5 +118,9 @@ extension PostViewController: NewPostViewModelDelegate {
     
     func errorMakeNewPost() {
         errorAlert()
+    }
+    
+    func empityMakeNewPost() {
+        empityAlert()
     }
 }

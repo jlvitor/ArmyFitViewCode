@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrainingDetailViewController: UIViewController {
+class TrainingDetailViewController: BaseViewController {
     
     var viewModel: TrainingViewModel?
     
@@ -21,15 +21,10 @@ class TrainingDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
         setLabels()
     }
     
     //MARK: - Private methods
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
-    }
-    
     private func setLabels() {
         guard let viewModel else { return }
         

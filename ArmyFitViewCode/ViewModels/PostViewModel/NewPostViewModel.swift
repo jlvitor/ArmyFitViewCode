@@ -10,6 +10,7 @@ import Foundation
 protocol NewPostViewModelDelegate {
     func successMakeNewPost()
     func errorMakeNewPost()
+    func empityMakeNewPost()
 }
 
 class NewPostViewModel {
@@ -34,12 +35,16 @@ class NewPostViewModel {
     func makeNewPost(description: String?) {
         guard let description = description else { return }
         
-        service.makeNewPost(description: description) { _, error in
-            if error != nil {
-                self.delegate?.errorMakeNewPost()
-                return
+        if description.contains("No que você está pensando?") || description.isEmpty {
+            self.delegate?.empityMakeNewPost()
+        } else {
+            service.makeNewPost(description: description) { _, error in
+                if error != nil {
+                    self.delegate?.errorMakeNewPost()
+                    return
+                }
+                self.delegate?.successMakeNewPost()
             }
-            self.delegate?.successMakeNewPost()
         }
     }
 }

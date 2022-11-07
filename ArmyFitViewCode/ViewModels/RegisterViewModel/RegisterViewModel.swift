@@ -21,6 +21,7 @@ class RegisterViewModel {
     
     //MARK: - Private properti
     private let service: AuthService = .init()
+    private let profileImage: String = "https://res.cloudinary.com/dsizc8npg/image/upload/v1664417651/profile2_lijztk.png"
     
     //MARK: - Public properties
     var delegate: RegisterViewModelDelegate?
@@ -32,7 +33,7 @@ class RegisterViewModel {
             name: getValueToValidade(name),
             email: getValueToValidade(email),
             password: getValueToValidade(password),
-            photoUrl: nil) { [weak self] _, error  in
+            photoUrl: profileImage) { [weak self] _, error  in
                 if error != nil {
                     self?.delegate?.errorRegister()
                 } else {

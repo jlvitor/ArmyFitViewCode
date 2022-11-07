@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: BaseViewController {
     
     //MARK: - Private properties
     private var feedScreen: FeedScreen?
@@ -21,15 +21,14 @@ class FeedViewController: UIViewController {
             delegate: self,
             dataSource: self,
             newPostDelegate: self)
-        self.feedScreen?.configUserImage(viewModel)
         self.view = self.feedScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
-        setupNavigationBar()
         configViewModel()
+        setupNavigationBar("Feed")
+        feedScreen?.configUserImage(viewModel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,14 +37,6 @@ class FeedViewController: UIViewController {
     }
     
     //MARK: - Private methods
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
-    }
-    
-    private func setupNavigationBar() {
-        navigationItem.title = "Feed"
-    }
-    
     private func configViewModel() {
         viewModel.delegate = self
         viewModel.likeDelegate = self

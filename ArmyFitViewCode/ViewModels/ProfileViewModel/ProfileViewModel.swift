@@ -12,13 +12,31 @@ protocol ComposerEmailProtocol {
     func composerEmail()
 }
 
+protocol ProfileViewModelProtocol {
+    func logout()
+}
+
 class ProfileViewModel {
     
     //MARK: - Private properties
     private let keychain: KeychainSwift = .init()
     
     //MARK: - Public properties
-    var delegate: ComposerEmailProtocol?
+    var emailDelegate: ComposerEmailProtocol?
+    var delegate: ProfileViewModelProtocol?
+    
+    //MARK: - Getters
+    var getUserImage: String {
+        UserDefaults.getValue(key: UserDefaults.Keys.userPhoto) as? String ?? "l1nq.com/nMZxZ"
+    }
+    
+    var getUserName: String {
+        guard let userName = UserDefaults.getValue(key: UserDefaults.Keys.userName) as? String else {
+            return "Perfil sem nome"
+        }
+        
+        return userName.uppercased()
+    }
     
     //MARK: - Public methods
     func countRowsInSection(at section: Int) -> Int {
@@ -69,16 +87,14 @@ class ProfileViewModel {
         switch section {
         case 1:
             if row == 0 {
-                self.delegate?.composerEmail()
+                self.emailDelegate?.composerEmail()
             }
             if row == 1 {
                 getWhatsApp()
             }
         case 2:
             if row == 0 {
-                resetUserDefaultsValue()
-                clearKeychain()
-                setRootViewController()
+                self.delegate?.logout()
             }
         default:
             break
@@ -105,6 +121,12 @@ class ProfileViewModel {
         }
         
         return defaultUrl
+    }
+    
+    func makeLogout() {
+        resetUserDefaultsValue()
+        clearKeychain()
+        setRootViewController()
     }
     
     //MARK: - Private methods

@@ -106,7 +106,6 @@ class PostCell: UICollectionViewCell {
     
     private lazy var likeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Curtir"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -134,7 +133,6 @@ class PostCell: UICollectionViewCell {
     
     private lazy var commentLabel: UILabel = {
         let label = UILabel()
-        label.text = "Comentar"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false

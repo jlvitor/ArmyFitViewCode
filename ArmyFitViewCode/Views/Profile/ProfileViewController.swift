@@ -8,7 +8,7 @@
 import UIKit
 import MessageUI
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
     
     //MARK: - Private properties
     private var profileScreen: ProfileScreen?
@@ -19,24 +19,24 @@ class ProfileViewController: UIViewController {
         super.loadView()
         self.profileScreen = ProfileScreen()
         self.profileScreen?.delegateTableView(delegate: self, dataSource: self)
+        self.profileScreen?.configUserLabel(viewModel)
         self.view = self.profileScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
-        setupNavigationBar()
-        viewModel.delegate = self
+        configViewModel()
+        setupBarButton()
+        setupNavigationBar("Perfil")
     }
     
     //MARK: - Private methods
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
+    private func configViewModel() {
+        viewModel.emailDelegate = self
+        viewModel.delegate = self
     }
     
-    private func setupNavigationBar() {
-        navigationItem.title = "Perfil"
-        
+    private func setupBarButton() {
         let barButtonItem = UIBarButtonItem(
             barButtonSystemItem: .compose,
             target: self,
@@ -48,6 +48,27 @@ class ProfileViewController: UIViewController {
     
     @objc private func barButtonTapped() {
         print("Teste")
+    }
+    
+    private func logoutAlert() {
+        let error = UIAlertController(
+            title: "Já vai sair?",
+            message: "Deseja mesmo sair?",
+            preferredStyle: .alert)
+        
+        let confirm = UIAlertAction(
+            title: "OK",
+            style: .default) { action in
+                self.viewModel.makeLogout()
+            }
+        
+        let cancel = UIAlertAction(
+            title: "Cancelar",
+            style: .cancel)
+        
+        error.addAction(confirm)
+        error.addAction(cancel)
+        present(error, animated: true)
     }
 }
 
@@ -118,5 +139,30 @@ extension ProfileViewController: ComposerEmailProtocol {
 extension ProfileViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+    }
+}
+
+// MARK: - ProfileViewModelProtocol
+extension ProfileViewController: ProfileViewModelProtocol {
+    func logout() {
+        logoutAlert()
+//        let confirmAlert = UIAlertController(
+//            title: "Já vai sair?",
+//            message: "Deseja mesmo sair?",
+//            preferredStyle: .alert)
+//
+//        let confirm = UIAlertAction(
+//            title: "Ok",
+//            style: .default) { action in
+//                self.viewModel.makeLogout()
+//            }
+//
+//        let cancel = UIAlertAction(
+//            title: "Cancelar",
+//            style: .cancel)
+//
+//        confirmAlert.addAction(confirm)
+//        confirmAlert.addAction(cancel)
+//        self.present(confirmAlert, animated: true)
     }
 }

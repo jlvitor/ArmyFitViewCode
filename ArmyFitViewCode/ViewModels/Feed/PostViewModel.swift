@@ -43,7 +43,7 @@ class PostViewModel {
     
     //MARK: - Public methods
     func numberOfLikes() -> String {
-        if post.like > 0 {
+        if post.like == 0 {
             return "Curtir"
         } else {
             return "Curtir \(post.like)"
@@ -55,7 +55,7 @@ class PostViewModel {
             if comment.comments == 0 {
                 return "Comentar"
             } else {
-                return "Comentar \(comment.comments)"
+                return "Comentários \(comment.comments)"
             }
         }
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrainingViewController: UIViewController {
+class TrainingViewController: BaseViewController {
     
     //MARK: - Private properties
     private var trainingScreen: TrainingScreen?
@@ -25,9 +25,8 @@ class TrainingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
-        setupNavigationBar()
         configViewModel()
+        setupNavigationBar("Treinos")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,15 +36,7 @@ class TrainingViewController: UIViewController {
         trainingScreen?.tableView.reloadData()
     }
     
-    //MARK: - Private methods
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "light")
-    }
-    
-    private func setupNavigationBar() {
-        navigationItem.title = "Treinos"
-    }
-    
+    //MARK: - Private methods    
     private func configViewModel() {
         viewModel.delegate = self
     }

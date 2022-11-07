@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     //MARK: - Private properties
     private var loginScreen: LoginScreen?
@@ -23,23 +23,17 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         configViewModel()
-        setupBackground()
+        setupNavigationBar(barIsHidden: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+    override func configBackgroundColor() {
+        self.view.backgroundColor = UIColor(named: "dark")
     }
     
     //MARK: - Private method
     private func configViewModel() {
         viewModel.delegate = self
-    }
-    
-    private func setupBackground() {
-        self.view.backgroundColor = UIColor(named: "dark")
     }
     
     private func errorAlert() {
