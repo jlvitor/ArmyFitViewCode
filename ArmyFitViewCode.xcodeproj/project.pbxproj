@@ -12,6 +12,9 @@
 		CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */; };
 		CC23F1C228F8CD32005F6667 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */; };
 		CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */; };
+		CC32B08F2919F9B7008DCC28 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32B08E2919F9B7008DCC28 /* CommentsViewController.swift */; };
+		CC32B0922919F9D5008DCC28 /* CommentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32B0912919F9D5008DCC28 /* CommentsScreen.swift */; };
+		CC32B0952919FA06008DCC28 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32B0942919FA06008DCC28 /* CommentsCell.swift */; };
 		CC39388528E5EA9000CB3DBB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388428E5EA9000CB3DBB /* UITableView+Extension.swift */; };
 		CC39388828E5EADF00CB3DBB /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39388728E5EADF00CB3DBB /* ProfileCell.swift */; };
 		CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39EBED28E3FA6F005AE3AB /* AppDelegate.swift */; };
@@ -57,6 +60,8 @@
 		CCC73E7829121C1D00CA6ECB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC73E7729121C1D00CA6ECB /* PostViewController.swift */; };
 		CCC955C628E3FF9F0019250F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C528E3FF9F0019250F /* LoginViewController.swift */; };
 		CCC955C928E4053E0019250F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC955C828E4053E0019250F /* ViewCode.swift */; };
+		CCEA3C0A2927162D0004A704 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA3C092927162D0004A704 /* CommentsViewModel.swift */; };
+		CCEA3C0C292717700004A704 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA3C0B292717700004A704 /* CommentViewModel.swift */; };
 		CCEC5F83290DA22B00C95431 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */; };
 		CCF14E5E290C96AE0048FF5E /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */; };
 		CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */; };
@@ -109,6 +114,9 @@
 		CC23F1BB28F8BC05005F6667 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		CC23F1C128F8CD32005F6667 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		CC23F1C428F8D062005F6667 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CC32B08E2919F9B7008DCC28 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		CC32B0912919F9D5008DCC28 /* CommentsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsScreen.swift; sourceTree = "<group>"; };
+		CC32B0942919FA06008DCC28 /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 		CC39388428E5EA9000CB3DBB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		CC39388728E5EADF00CB3DBB /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		CC39EBEA28E3FA6F005AE3AB /* ArmyFitViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmyFitViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +167,8 @@
 		CCC73E7729121C1D00CA6ECB /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CCC955C528E3FF9F0019250F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCC955C828E4053E0019250F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		CCEA3C092927162D0004A704 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		CCEA3C0B292717700004A704 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		CCEC5F82290DA22B00C95431 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		CCF14E5D290C96AE0048FF5E /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
 		CCF14E60290C9B620048FF5E /* TrainingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsViewModel.swift; sourceTree = "<group>"; };
@@ -246,6 +256,32 @@
 			isa = PBXGroup;
 			children = (
 				CC39388728E5EADF00CB3DBB /* ProfileCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC32B08D2919F99D008DCC28 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				CC32B0902919F9C0008DCC28 /* Screen */,
+				CC32B08E2919F9B7008DCC28 /* CommentsViewController.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		CC32B0902919F9C0008DCC28 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC32B0932919F9DB008DCC28 /* Cell */,
+				CC32B0912919F9D5008DCC28 /* CommentsScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC32B0932919F9DB008DCC28 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC32B0942919FA06008DCC28 /* CommentsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -503,6 +539,7 @@
 				CCF84B24290C47F9008E48D5 /* TabBar */,
 				CCF84B23290C47F0008E48D5 /* Feed */,
 				CCC73E752912194600CA6ECB /* Post */,
+				CC32B08D2919F99D008DCC28 /* Comments */,
 				CC59034428FC939100C9FEB1 /* Schedule */,
 				CC6B499E2909E66600CBA70E /* ScheduleDetail */,
 				CC67D93128E69CB600AC90A0 /* Training */,
@@ -519,6 +556,7 @@
 				CCF84B21290C47D8008E48D5 /* RegisterViewModel */,
 				CC59A9292910C3090040B83D /* Feed */,
 				CC4A2F6129185E6000650C3E /* PostViewModel */,
+				CCEA3C08292716010004A704 /* CommentsViewModel */,
 				CC59035328FCCA7700C9FEB1 /* Schedule */,
 				CC574780290B76A800B272B9 /* ScheduleDetail */,
 				CCF14E5F290C9B370048FF5E /* TrainingViewModel */,
@@ -547,6 +585,15 @@
 				CCC955C828E4053E0019250F /* ViewCode.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CCEA3C08292716010004A704 /* CommentsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCEA3C092927162D0004A704 /* CommentsViewModel.swift */,
+				CCEA3C0B292717700004A704 /* CommentViewModel.swift */,
+			);
+			path = CommentsViewModel;
 			sourceTree = "<group>";
 		};
 		CCEC5F81290DA21800C95431 /* TrainingDetail */ = {
@@ -717,6 +764,7 @@
 				CC39EBE728E3FA6F005AE3AB /* Frameworks */,
 				CC39EBE828E3FA6F005AE3AB /* Resources */,
 				CCDF06C99938CE77585FC49B /* [CP] Embed Pods Frameworks */,
+				CCDCD7ED29301D830081CD19 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -899,6 +947,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CCDCD7ED29301D830081CD19 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		CCDF06C99938CE77585FC49B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -973,6 +1038,7 @@
 				CC585DBD28E522DD008E78BB /* ScheduleViewController.swift in Sources */,
 				CC23F1C528F8D062005F6667 /* ProfileViewModel.swift in Sources */,
 				CCC73E7829121C1D00CA6ECB /* PostViewController.swift in Sources */,
+				CC32B0922919F9D5008DCC28 /* CommentsScreen.swift in Sources */,
 				CC59034E28FC995100C9FEB1 /* UICollectionView+Extension.swift in Sources */,
 				CC59035528FCCC2200C9FEB1 /* TrainingHoursService.swift in Sources */,
 				CC39EBEE28E3FA6F005AE3AB /* AppDelegate.swift in Sources */,
@@ -991,10 +1057,12 @@
 				CCF14E61290C9B620048FF5E /* TrainingsViewModel.swift in Sources */,
 				CCF14E63290C9BAC0048FF5E /* TrainingUserSection.swift in Sources */,
 				CC39EBF028E3FA6F005AE3AB /* SceneDelegate.swift in Sources */,
+				CCEA3C0A2927162D0004A704 /* CommentsViewModel.swift in Sources */,
 				CC574782290B76CB00B272B9 /* ScheduleDetailViewModel.swift in Sources */,
 				CC57477F290B6EE300B272B9 /* UserDetailCell.swift in Sources */,
 				CC59034C28FC943D00C9FEB1 /* ScheduleScreen.swift in Sources */,
 				CCB8809F28F63467007EF254 /* LoginViewModel.swift in Sources */,
+				CCEA3C0C292717700004A704 /* CommentViewModel.swift in Sources */,
 				CC585DBB28E522C8008E78BB /* FeedViewController.swift in Sources */,
 				CCFEAEC728EB87370013D34F /* RegisterScreen.swift in Sources */,
 				CCC955C928E4053E0019250F /* ViewCode.swift in Sources */,
@@ -1005,6 +1073,8 @@
 				CCF14E5E290C96AE0048FF5E /* TrainingScreen.swift in Sources */,
 				CC6B49A42909F13800CBA70E /* ScheduleDetailScreen.swift in Sources */,
 				CCFEAEA328EB39890013D34F /* User.swift in Sources */,
+				CC32B0952919FA06008DCC28 /* CommentsCell.swift in Sources */,
+				CC32B08F2919F9B7008DCC28 /* CommentsViewController.swift in Sources */,
 				CC23F1BC28F8BC05005F6667 /* UserDefaults+Extension.swift in Sources */,
 				CCFEAEC028EB3C4C0013D34F /* Training.swift in Sources */,
 				CC59A9262910AAD30040B83D /* FeedScreen.swift in Sources */,
