@@ -46,6 +46,14 @@ class FeedViewController: BaseViewController {
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 extension FeedViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let commentVC: CommentsViewController = .init()
+        commentVC.viewModel = viewModel.getPostDetail(at: indexPath.item)
+        
+        self.navigationController?.pushViewController(commentVC, animated: true)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(
             width: view.bounds.width - 24,

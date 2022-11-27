@@ -60,10 +60,10 @@ class FeedViewModel {
         return PostViewModel(post)
     }
     
-//    func getPostDetail(at index: Int?) -> CommentsViewModel? {
-//        guard let index = index else { return nil }
-//        
-//        let post = postsList[index]
-//        return CommentsViewModel(post: post)
-//    }
+    func getPostDetail(at index: Int?) -> CommentsViewModel? {
+        guard let index = index else { return nil }
+        
+        let post = postsList[index]
+        return CommentsViewModel(post: post)
+    }
 }
